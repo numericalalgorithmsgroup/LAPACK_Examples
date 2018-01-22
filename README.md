@@ -80,7 +80,7 @@ them both to be the same library, or one of them to be blank).
 
 Then a command such as:
 
-  make compiler=nagfor
+  * make compiler=nagfor
 
 will compile all the necessary auxiliary (matrix printing) code into a
 library, and then compile, link and run each individual LAPACK example program.
@@ -89,7 +89,7 @@ in the examples/baseresults directory.
 
 To compile a single example, a command such as:
 
-  make compiler=gfortran dgetrf_example.r
+  * make compiler=gfortran dgetrf_example.r
 
 should work.
 
