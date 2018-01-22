@@ -71,11 +71,12 @@ the example programs using one of various compilers.
 
 First of all, edit GNUmakefile and modify these two lines:
 
-  * LIBLAPACK := lapack-3.8.0/$(compiler)/liblapack.a
-  * LIBBLAS := lapack-3.8.0/$(compiler)/librefblas.a
+  * LIBLAPACK := ../lapack-3.8.0/$(compiler)/liblapack.a
+  * LIBBLAS := ../lapack-3.8.0/$(compiler)/librefblas.a
 
-to give the paths of your LAPACK and BLAS libraries (they may both
-be the same library).
+to give the paths of your LAPACK and BLAS libraries (if you have just
+one library containing both LAPACK and BLAS routines, you can set
+them both to be the same library, or one of them to be blank).
 
 Then a command such as:
 
@@ -85,3 +86,23 @@ will compile all the necessary auxiliary (matrix printing) code into a
 library, and then compile, link and run each individual LAPACK example program.
 The results will be compared with a set of expected results which are located
 in the examples/baseresults directory.
+
+# Test platforms
+The GNUmakefile currently has knowledge of the following Fortran compilers:
+
+  * NAG Fortran compiler, nagfor
+  * GNU Fortran compiler, gfortran
+  * Intel Fortran compiler, ifort
+  * PGI Fortran compiler, pgf90
+
+The example programs have been shown to work with all these compilers
+on a Linux operating system, and the first three also on Microsoft Windows.
+
+# Example Program Result Differences
+Small differences may show up between the "base" results and the results
+you get when you run the example programs. These can be because
+of small rounding differences either in the LAPACK library you're using,
+or because different compilers have subtle differences in the way that
+they print numbers (for example, in Fortran formatted output, some
+compilers print tiny negative numbers which round to zero when formatted
+as -0.0000 and other compilers print as 0.0000).
