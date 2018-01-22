@@ -1,6 +1,8 @@
 # Example Programs for LAPACK Routines
 This repository contains example programs written in Fortran 95 showing
-how to call double precision versions of most top level LAPACK routines.
+how to call double precision versions of most top-level LAPACK (driver
+and computational) routines.
+
 The programs are derived from the examples used in documentation of these
 routines for the NAG Fortran Library https://www.nag.com/nag-fortran-library,
 but they don't require use of that library because everything needed is
