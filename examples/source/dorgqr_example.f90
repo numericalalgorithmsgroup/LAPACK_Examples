@@ -1,0 +1,52 @@
+    Program dorgqr_example
+
+!     DORGQR Example Program Text
+
+!     Copyright 2017, Numerical Algorithms Group Ltd. http://www.nag.com
+
+!     .. Use Statements ..
+      Use lapack_example_aux, Only: nagf_file_print_matrix_real_gen
+      Use lapack_interfaces, Only: dgeqrf, dorgqr
+      Use lapack_precision, Only: dp
+!     .. Implicit None Statement ..
+      Implicit None
+!     .. Parameters ..
+      Integer, Parameter :: nin = 5, nout = 6
+!     .. Local Scalars ..
+      Integer :: i, ifail, info, lda, lwork, m, n
+      Character (30) :: title
+!     .. Local Arrays ..
+      Real (Kind=dp), Allocatable :: a(:, :), tau(:), work(:)
+!     .. Executable Statements ..
+      Write (nout, *) 'DORGQR Example Program Results'
+!     Skip heading in data file
+      Read (nin, *)
+      Read (nin, *) m, n
+      lda = m
+      lwork = 64*n
+      Allocate (a(lda,n), tau(n), work(lwork))
+
+!     Read A from data file
+
+      Read (nin, *)(a(i,1:n), i=1, m)
+
+!     Compute the QR factorization of A
+      Call dgeqrf(m, n, a, lda, tau, work, lwork, info)
+
+!     Form the leading N columns of Q explicitly
+      Call dorgqr(m, n, n, a, lda, tau, work, lwork, info)
+
+!     Print the leading N columns of Q only
+
+      Write (nout, *)
+      Write (title, 100) n
+      Flush (nout)
+
+!     ifail: behaviour on error exit
+!             =0 for hard exit, =1 for quiet-soft, =-1 for noisy-soft
+      ifail = 0
+      Call nagf_file_print_matrix_real_gen('General', ' ', m, n, a, lda, &
+        title, ifail)
+
+100   Format ('The leading ', I2, ' columns of Q')
+    End Program
