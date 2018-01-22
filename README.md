@@ -87,6 +87,12 @@ library, and then compile, link and run each individual LAPACK example program.
 The results will be compared with a set of expected results which are located
 in the examples/baseresults directory.
 
+To compile a single example, a command such as:
+
+  make compiler=gfortran dgetrf_example.r
+
+should work.
+
 # Test platforms
 The GNUmakefile currently has knowledge of the following Fortran compilers:
 
@@ -94,15 +100,18 @@ The GNUmakefile currently has knowledge of the following Fortran compilers:
   * GNU Fortran compiler, gfortran
   * Intel Fortran compiler, ifort
   * PGI Fortran compiler, pgf90
+  * ARM Fortran compiler, armflang
 
 The example programs have been shown to work with all these compilers
-on a Linux operating system, and the first three also on Microsoft Windows.
+on various 64-bit GNU/Linux operating systems, and the first three also on
+64-bit Microsoft Windows.
 
-# Example Program Result Differences
+# Example program result differences
 Small differences may show up between the "base" results and the results
 you get when you run the example programs. These can be because
 of small rounding differences either in the LAPACK library you're using,
 or because different compilers have subtle differences in the way that
 they print numbers (for example, in Fortran formatted output, some
 compilers print tiny negative numbers which round to zero when formatted
-as -0.0000 and other compilers print as 0.0000).
+as -0.0000 and other compilers print as 0.0000). Occasionally eigenvalues
+and eigenvectors may be produced in a different order.
