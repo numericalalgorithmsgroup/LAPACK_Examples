@@ -2,7 +2,9 @@
 
 !     ZPPSV Example Program Text
 
-!     Copyright 2017, Numerical Algorithms Group Ltd. http://www.nag.com
+!     Copyright (c) 2018, Numerical Algorithms Group (NAG Ltd.)
+!     For licence see
+!       https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/LICENCE.md
 
 !     .. Use Statements ..
       Use lapack_example_aux, Only: nagf_file_print_matrix_complex_packed_comp

@@ -1,5 +1,7 @@
 !   DTGEVC Example Program Text
-!   Copyright 2017, Numerical Algorithms Group Ltd. http://www.nag.com
+!   Copyright (c) 2018, Numerical Algorithms Group (NAG Ltd.)
+!   For licence see
+!     https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/LICENCE.md
 
     Module dtgevc_example_mod
 
