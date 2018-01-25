@@ -6,3 +6,4 @@ BUILD_*
 *.obj
 *.exe
 *.mod
+*.out
