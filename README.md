@@ -31,38 +31,48 @@ Fortran compiler of your choice.
 
   * Go to the interface_blocks directory, and compile the file
     lapack_precision.f90:
+```
       cd lapack_examples/interface_blocks
       nagfor -c lapack_precision.f90
+```
     This module defines dp and sp, double and single precision
     kind types respectively, and it is needed by almost all the
     other Fortran files.
 
   * In the same interface_blocks directory, compile the rest of the files:
+```
       nagfor -c *.f90
+```
     The object files produced by these compilations are not important, but
     the module files produced are.
 
   * Go to the aux directory, and compile all the files there, using the
     modules in the interface_blocks directory:
+```
       cd lapack_examples/aux
       nagfor -c -I../interface_blocks *.f90
+```
 
   * Still in the aux directory, put all the object files into a library:
       ar rv libaux.a *.o
 
 Now you've done all the preparation needed before you can compile an
-LAPACK example program. Let's use dgetrf_example.f90:
+LAPACK example program.
 
   * Let's use dgetrf_example.f90:
+```
       cd lapack_examples/examples/source
       nagfor -I../../interface_blocks dgetrf_example.f90 ../../aux/libaux.a
         full_path_to/liblapack.a full_path_to/libblas.a -o dgetrf_example.exe
+```
+
     Here we assume that the LAPACK and BLAS routines are held in two
     separate libraries. You may have one library containing all of them.
 
   * Run the program, using the approprate data file as input:
+```
       ./dgetrf_example.exe < ../data/dgetrf_example.d
-
+```
 That's it. If you had no problems, then you should be able to compile and
 run all the other example programs too.
 
@@ -81,18 +91,18 @@ one library containing both LAPACK and BLAS routines, you can set
 them both to be the same library, or one of them to be blank).
 
 Then a command such as:
-
-  * make compiler=nagfor
-
+```
+  make compiler=nagfor
+```
 will compile all the necessary auxiliary (matrix printing) code into a
 library, and then compile, link and run each individual LAPACK example program.
 The results will be compared with a set of expected results which are located
 in the examples/baseresults directory.
 
 To compile a single example, a command such as:
-
-  * make compiler=gfortran dgetrf_example.r
-
+```
+  make compiler=gfortran dgetrf_example.r
+```
 should work.
 
 # Test platforms
