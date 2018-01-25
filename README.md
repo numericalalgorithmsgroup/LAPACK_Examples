@@ -23,12 +23,12 @@ Once you've taken a copy of the repository, you'll find these items:
 # How to build manually
 We assume that you already have a library of LAPACK and BLAS routines that
 you can link the example programs to; they may be libraries that you have
-compiled yourself, from the netlib LAPACK source code, or they may be libraries
-obtained from elsewhere, e.g. the NAG Library, Intel's MKL, or the ARM
-Performance Library. These libraries must be compatible with the compiler
-that you use to compile the current example programs. Here we assume use
-of the NAG Fortran compiler, nagfor, but you can  use any other modern
-Fortran compiler of your choice.
+compiled yourself, from the netlib [LAPACK source code](http://www.netlib.org/lapack/),
+or they may be libraries obtained from elsewhere, e.g. the NAG Library,
+Intel's MKL, or the ARM Performance Library. These libraries must be compatible
+with the compiler that you use to compile the current example programs. Here
+we assume use of the NAG Fortran compiler, nagfor, but you can  use any other
+modern Fortran compiler of your choice.
 
   * Go to the interface_blocks directory, and compile the file
     lapack_precision.f90:
