@@ -1,5 +1,5 @@
 # Example Programs for LAPACK Routines
-This repository contains example programs written in Fortran 95 showing
+This repository contains example programs written in Fortran 90 showing
 how to call double precision versions of most top-level LAPACK (driver
 and computational) routines.
 
