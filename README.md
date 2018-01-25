@@ -50,7 +50,7 @@ the module files produced are.
     modules in the interface_blocks directory:
 ```
     cd auxiliary
-      nagfor -c -I../interface_blocks *.f90
+    nagfor -c -I../interface_blocks *.f90
 ```
   * Still in the auxiliary directory, put all the object files into a library:
       ar rv libaux.a *.o
