@@ -1,5 +1,8 @@
     Subroutine nagf_blas_ddscl(n, d, incd, x, incx)
-!     Mark 12 Release. NAG Copyright 1986.
+
+!     Copyright (c) 2018, Numerical Algorithms Group (NAG Ltd.)
+!     For licence see
+!       https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/LICENCE.md
 
 !     NAGF_BLAS_DDSCL performs the operation
 

@@ -1,11 +1,9 @@
     Subroutine nagf_file_print_matrix_complex_band_comp(m, n, kl, ku, a, lda, &
       usefrm, form, title, labrow, rlabs, labcol, clabs, ncols, indent, ifail)
 
-!
-!     Fortran Library Implementation Wrapper routine for X04DFFN.
-!
-!     Mark 14 Release. NAG Copyright 1989.
-!
+!     Copyright (c) 2018, Numerical Algorithms Group (NAG Ltd.)
+!     For licence see
+!       https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/LICENCE.md
 
 !     .. Use Statements ..
       Use lapack_precision, Only: dp

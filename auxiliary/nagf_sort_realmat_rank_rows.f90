@@ -1,7 +1,10 @@
     Subroutine nagf_sort_realmat_rank_rows(rm, ldm, m1, m2, n1, n2, order, &
       irank, ifail)
-!     Mark 12 Release. NAG Copyright 1986.
-!
+
+!     Copyright (c) 2018, Numerical Algorithms Group (NAG Ltd.)
+!     For licence see
+!       https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/LICENCE.md
+
 !     NAGF_SORT_REALMAT_RANK_ROWS ranks the rows of a matrix of real numbers
 !     in ascending or descending order.
 !

@@ -1,7 +1,9 @@
     Subroutine nagf_file_print_matrix_complex_band(m, n, kl, ku, a, lda, &
       title, ifail)
 !
-!     Fortran Library Implementation Wrapper routine for X04DEFN.
+!     Copyright (c) 2018, Numerical Algorithms Group (NAG Ltd.)
+!     For licence see
+!       https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/LICENCE.md
 !
 !     .. Use Statements ..
       Use lapack_precision, Only: dp

@@ -1,5 +1,9 @@
     Subroutine x04ccfn(uplo, diag, n, a, title, errbuf, ifail)
-!     Mark 14 Release. NAG Copyright 1989.
+
+!     Copyright (c) 2018, Numerical Algorithms Group (NAG Ltd.)
+!     For licence see
+!       https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/LICENCE.md
+
 !     Prints a real triangular matrix stored in packed vector form.
 !     Easy to use driver for X04CDFN.
 

@@ -1,6 +1,10 @@
     Subroutine x04ddfn(uplo, diag, n, a, usefrm, form, title, labrow, rlabs, &
       labcol, clabs, ncols, indent, errbuf, ifail)
-!     Mark 14 Release. NAG Copyright 1989.
+
+!     Copyright (c) 2018, Numerical Algorithms Group (NAG Ltd.)
+!     For licence see
+!       https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/LICENCE.md
+
 !     Prints a complex triangular matrix stored in packed vector form.
 
 !     .. Use Statements ..

@@ -1,13 +1,15 @@
     Subroutine x04bafn(nout, rec)
-!     Mark 11.5(F77) Release. NAG Copyright 1986.
-!
+
+!     Copyright (c) 2018, Numerical Algorithms Group (NAG Ltd.)
+!     For licence see
+!       https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/LICENCE.md
+
 !     X04BAFN writes the contents of REC to the unit defined by NOUT.
 !
 !     Trailing blanks are not output, except that if REC is entirely
 !     blank, a single blank character is output.
 !     If NOUT.lt.0, i.e. if NOUT is not a valid Fortran unit identifier,
 !     then no output occurs.
-!
 
 !     .. Implicit None Statement ..
       Implicit None

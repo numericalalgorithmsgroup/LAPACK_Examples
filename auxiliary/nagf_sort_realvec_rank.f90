@@ -1,6 +1,9 @@
     Subroutine nagf_sort_realvec_rank(rv, m1, m2, order, irank, ifail)
-!     Mark 12 Release. NAG Copyright 1986.
-!
+
+!     Copyright (c) 2018, Numerical Algorithms Group (NAG Ltd.)
+!     For licence see
+!       https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/LICENCE.md
+
 !     NAGF_SORT_REALVEC_RANK ranks a vector of real numbers in ascending
 !     or descending order.
 !
@@ -16,7 +19,6 @@
 !
 !     Written by N.M.Maclaren, University of Cambridge.
 !     Revised by NAG Central Office.
-!
 
 !     .. Use Statements ..
       Use lapack_precision, Only: dp

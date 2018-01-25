@@ -1,8 +1,8 @@
     Subroutine nagf_blas_damax_val(n, x, incx, k, r)
 
-!     Mark 22 Release. NAG Copyright 2007.
-
-!     Mat Cross, NAG Oxford
+!     Copyright (c) 2018, Numerical Algorithms Group (NAG Ltd.)
+!     For licence see
+!       https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/LICENCE.md
 
 !     K = arg max {ABS(X(J))}, R = max {ABS(X(J))}
 !             J                      J

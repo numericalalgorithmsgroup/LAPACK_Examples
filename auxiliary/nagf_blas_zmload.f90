@@ -1,5 +1,8 @@
     Subroutine nagf_blas_zmload(matrix, m, n, con, diag, a, lda)
-!     Mark 13 Release. NAG Copyright 1988.
+
+!     Copyright (c) 2018, Numerical Algorithms Group (NAG Ltd.)
+!     For licence see
+!       https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/LICENCE.md
 
 !     NAGF_BLAS_ZMLOAD forms the m by n matrix A given by
 

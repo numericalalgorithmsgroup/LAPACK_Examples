@@ -1,5 +1,9 @@
     Subroutine x04dafn(matrix, diag, m, n, a, lda, title, nout, errbuf, ifail)
-!     Mark 14 Release. NAG Copyright 1989.
+
+!     Copyright (c) 2018, Numerical Algorithms Group (NAG Ltd.)
+!     For licence see
+!       https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/LICENCE.md
+
 !     Prints a general complex matrix.
 !     Easy to use driver for X04DBFN.
 

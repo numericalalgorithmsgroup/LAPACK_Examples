@@ -1,6 +1,9 @@
     Subroutine nagf_sort_cmplxvec_rank_rearrange(cv, m1, m2, irank, ifail)
-!     Mark 19 Release. NAG Copyright 1999.
-!
+
+!     Copyright (c) 2018, Numerical Algorithms Group (NAG Ltd.)
+!     For licence see
+!       https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/LICENCE.md
+
 !     NAGF_SORT_CMPLXVEC_RANK_REARRANGE re-arranges a vector of complex numbers
 !     into the order specified by a vector of ranks.
 !
@@ -15,7 +18,6 @@
 !
 !     Written by N.M.Maclaren, University of Cambridge.
 !     Revised by NAG Central Office.
-!
 
 !     .. Use Statements ..
       Use lapack_precision, Only: dp

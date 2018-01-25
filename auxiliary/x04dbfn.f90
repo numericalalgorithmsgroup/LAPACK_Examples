@@ -1,7 +1,10 @@
     Subroutine x04dbfn(matrix, diag, m, n, a, lda, usefrm, form, title, &
       labrow, rlabs, labcol, clabs, ncols, indent, nout, errbuf, ifail)
-!     Mark 14 Release. NAG Copyright 1989.
-!     Mark 16a Revised. IER-1049 (Jun 1993).
+
+!     Copyright (c) 2018, Numerical Algorithms Group (NAG Ltd.)
+!     For licence see
+!       https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/LICENCE.md
+
 !     Prints a general complex matrix.
 
 !     .. Use Statements ..

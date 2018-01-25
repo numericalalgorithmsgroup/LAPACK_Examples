@@ -1,8 +1,9 @@
     Function p01abf(ifail, ierror, srname, nrec, rec)
-!     Mark 11.5(F77) Release. NAG Copyright 1986.
-!     Mark 13 Revised. IER-621 (Apr 1988).
-!     Mark 13B Revised. IER-668 (Aug 1988).
-!
+
+!     Copyright (c) 2018, Numerical Algorithms Group (NAG Ltd.)
+!     For licence see
+!       https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/LICENCE.md
+
 !     P01ABF is the error-handling routine for the NAG Library.
 !
 !     P01ABF either returns the value of IERROR through the routine
@@ -34,7 +35,6 @@
 !     except that hard failure now always implies a noisy exit.
 !
 !     S.Hammarling, M.P.Hooper and J.J.du Croz, NAG Central Office.
-!
 
 !     .. Implicit None Statement ..
       Implicit None

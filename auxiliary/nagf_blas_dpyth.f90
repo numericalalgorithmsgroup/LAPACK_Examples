@@ -1,6 +1,8 @@
     Function nagf_blas_dpyth(a, b)
 !
-!     Mark 12 Release. NAG Copyright 1986.
+!     Copyright (c) 2018, Numerical Algorithms Group (NAG Ltd.)
+!     For licence see
+!       https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/LICENCE.md
 !
 !     NAGF_BLAS_DPYTH returns the value
 !

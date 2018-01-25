@@ -1,8 +1,10 @@
     Subroutine nagf_file_print_matrix_integer_comp(matrix, diag, m, n, a, lda, &
       form, title, labrow, rlabs, labcol, clabs, ncols, indent, ifail)
-!
-!     Fortran Library Implementation Wrapper routine for X04EBFN.
-!
+
+!     Copyright (c) 2018, Numerical Algorithms Group (NAG Ltd.)
+!     For licence see
+!       https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/LICENCE.md
+
 !     .. Implicit None Statement ..
       Implicit None
 !     .. Scalar Arguments ..

@@ -1,8 +1,9 @@
     Subroutine x04aafn(iflag, nerr)
-!     Mark 7 Release. NAG Copyright 1978
-!     Mark 7C Revised IER-190 (May 1979)
-!     Mark 11.5(F77) Revised. (Sept 1985.)
-!     Mark 14 Revised. IER-829 (Dec 1989).
+
+!     Copyright (c) 2018, Numerical Algorithms Group (NAG Ltd.)
+!     For licence see
+!       https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/LICENCE.md
+
 !     If IFLAG = 0, sets NERR to current error message unit number
 !     (stored in NERR1).
 !     If IFLAG = 1, changes current error message unit number to
