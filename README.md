@@ -32,7 +32,7 @@ Fortran compiler of your choice.
   * Go to the interface_blocks directory, and compile the file
     lapack_precision.f90:
 ```
-      cd lapack_examples/interface_blocks
+      cd interface_blocks
       nagfor -c lapack_precision.f90
 ```
     This module defines dp and sp, double and single precision
@@ -49,7 +49,7 @@ Fortran compiler of your choice.
   * Go to the aux directory, and compile all the files there, using the
     modules in the interface_blocks directory:
 ```
-      cd lapack_examples/aux
+      cd auxiliary
       nagfor -c -I../interface_blocks *.f90
 ```
 
@@ -61,11 +61,10 @@ LAPACK example program.
 
   * Let's use dgetrf_example.f90:
 ```
-      cd lapack_examples/examples/source
+      cd examples/source
       nagfor -I../../interface_blocks dgetrf_example.f90 ../../aux/libaux.a
         full_path_to/liblapack.a full_path_to/libblas.a -o dgetrf_example.exe
 ```
-
     Here we assume that the LAPACK and BLAS routines are held in two
     separate libraries. You may have one library containing all of them.
 
