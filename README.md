@@ -12,7 +12,7 @@ here in this repository, including various auxiliary routines.
 Once you've taken a copy of the repository, you'll find these items:
   * interface_blocks    - a directory containing a few Fortran module files
                           used when compiling the rest of the example source
-  * aux                 - a small set of auxiliary routines used by the
+  * auxiliary           - a small set of auxiliary routines used by the
                           example programs, for sorting and printing results
   * examples/source     - source code of individual LAPACK examples
   * examples/data       - input data files, one needed by each LAPACK example
@@ -34,7 +34,7 @@ Fortran compiler of your choice.
 ```
       cd interface_blocks
       nagfor -c lapack_precision.f90
-```
+
     This module defines dp and sp, double and single precision
     kind types respectively, and it is needed by almost all the
     other Fortran files.
@@ -42,18 +42,17 @@ Fortran compiler of your choice.
   * In the same interface_blocks directory, compile the rest of the files:
 ```
       nagfor -c *.f90
-```
+
     The object files produced by these compilations are not important, but
     the module files produced are.
 
-  * Go to the aux directory, and compile all the files there, using the
+  * Go to the auxiliary directory, and compile all the files there, using the
     modules in the interface_blocks directory:
 ```
       cd auxiliary
       nagfor -c -I../interface_blocks *.f90
-```
 
-  * Still in the aux directory, put all the object files into a library:
+  * Still in the auxiliary directory, put all the object files into a library:
       ar rv libaux.a *.o
 
 Now you've done all the preparation needed before you can compile an
@@ -62,16 +61,16 @@ LAPACK example program.
   * Let's use dgetrf_example.f90:
 ```
       cd examples/source
-      nagfor -I../../interface_blocks dgetrf_example.f90 ../../aux/libaux.a
+      nagfor -I../../interface_blocks dgetrf_example.f90 ../../auxiliary/libaux.a
         full_path_to/liblapack.a full_path_to/libblas.a -o dgetrf_example.exe
-```
+
     Here we assume that the LAPACK and BLAS routines are held in two
     separate libraries. You may have one library containing all of them.
 
   * Run the program, using the approprate data file as input:
 ```
       ./dgetrf_example.exe < ../data/dgetrf_example.d
-```
+
 That's it. If you had no problems, then you should be able to compile and
 run all the other example programs too.
 
@@ -92,7 +91,7 @@ them both to be the same library, or one of them to be blank).
 Then a command such as:
 ```
   make compiler=nagfor
-```
+
 will compile all the necessary auxiliary (matrix printing) code into a
 library, and then compile, link and run each individual LAPACK example program.
 The results will be compared with a set of expected results which are located
@@ -101,7 +100,7 @@ in the examples/baseresults directory.
 To compile a single example, a command such as:
 ```
   make compiler=gfortran dgetrf_example.r
-```
+
 should work.
 
 # Test platforms
