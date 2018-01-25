@@ -10,14 +10,15 @@ here in this repository, including various auxiliary routines.
 
 # File organization
 Once you've taken a copy of the repository, you'll find these items:
-  * interface_blocks    - a directory containing a few Fortran module files
-                          used when compiling the rest of the example source
-  * auxiliary           - a small set of auxiliary routines used by the
-                          example programs, for sorting and printing results
-  * examples/source     - source code of individual LAPACK examples
-  * examples/data       - input data files, one needed by each LAPACK example
-  * GNUmakefile         - a makefile that can be used (with minor modification)
-                          to compile and run all the LAPACK examples
+  * interface_blocks     - a directory containing a few Fortran module files
+                           used when compiling the rest of the example source
+  * auxiliary            - a small set of auxiliary routines used by the
+                           example programs, for sorting and printing results
+  * examples/source      - source code of individual LAPACK examples
+  * examples/data        - input data files, one needed by each LAPACK example
+  * examples/baseresults - expected result files (machine dependent)
+  * GNUmakefile          - a makefile that can be used (with minor modification)
+                           to compile and run all the LAPACK examples
 
 # How to build manually
 We assume that you already have a library of LAPACK and BLAS routines that
