@@ -1,1 +1,8 @@
 *~
+BUILD_*
+*.a
+*.lib
+*.o
+*.obj
+*.exe
+*.mod
