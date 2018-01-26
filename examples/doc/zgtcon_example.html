@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>zgtcon example program</title>
+<link rel="stylesheet" href="styles/libdoc.css" type="text/css"/>
+<link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
+
+<h2 class="standard" id="example">
+ <div class="sec_name">Example program for zgtcon</div>
+</h2>
+<div class="paramtext">This example estimates the condition number in the <math><mn>1</mn></math>-norm of the tridiagonal matrix <math>
+ <mi>A</mi>
+</math>&#xa0;given by
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>A</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>1.3</mn></mrow><mo>+</mo><mn>1.3</mn><mi>i</mi></mtd>
+   <mtd><mn>2.0</mn><mo>-</mo><mn>1.0</mn><mi>i</mi></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom><mphantom><mi>i</mi><mo>+</mo><mn>0.0</mn></mphantom></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom><mphantom><mi>i</mi><mo>+</mo><mn>0.0</mn></mphantom></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom><mphantom><mi>i</mi><mo>+</mo><mn>0.0</mn></mphantom></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>1.0</mn><mo>-</mo><mn>2.0</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.3</mn></mrow><mo>+</mo><mn>1.3</mn><mi>i</mi></mtd>
+   <mtd><mn>2.0</mn><mo>+</mo><mn>1.0</mn><mi>i</mi></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom><mphantom><mi>i</mi><mo>+</mo><mn>0.0</mn></mphantom></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom><mphantom><mi>i</mi><mo>+</mo><mn>0.0</mn></mphantom></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom><mphantom><mi>i</mi><mo>+</mo><mn>0.0</mn></mphantom></mtd>
+   <mtd><mn>1.0</mn><mo>+</mo><mn>1.0</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.3</mn></mrow><mo>+</mo><mn>3.3</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.0</mn></mrow><mo>+</mo><mn>1.0</mn><mi>i</mi></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom><mphantom><mi>i</mi><mo>+</mo><mn>0.0</mn></mphantom></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom><mphantom><mi>i</mi><mo>+</mo><mn>0.0</mn></mphantom></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom><mphantom><mi>i</mi><mo>+</mo><mn>0.0</mn></mphantom></mtd>
+   <mtd><mn>2.0</mn><mo>-</mo><mn>3.0</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.3</mn></mrow><mo>+</mo><mn>4.3</mn><mi>i</mi></mtd>
+   <mtd><mn>1.0</mn><mo>-</mo><mn>1.0</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom><mphantom><mi>i</mi><mo>+</mo><mn>0.0</mn></mphantom></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom><mphantom><mi>i</mi><mo>+</mo><mn>0.0</mn></mphantom></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom><mphantom><mi>i</mi><mo>+</mo><mn>0.0</mn></mphantom></mtd>
+   <mtd><mn>1.0</mn><mo>+</mo><mn>1.0</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>3.3</mn></mrow><mo>+</mo><mn>1.3</mn><mi>i</mi></mtd>
+</mtr>
+</mtable></mfenced>
+ <mtext>.</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+</div>
+
+</body>
+</html>

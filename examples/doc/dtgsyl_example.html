@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>dtgsyl example program</title>
+<link rel="stylesheet" href="styles/libdoc.css" type="text/css"/>
+<link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
+
+<h2 class="standard" id="example">
+ <div class="sec_name">Example program for dtgsyl</div>
+</h2>
+<div class="paramtext">This example solves the generalized Sylvester equations
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mtable>
+  <mtr>
+   <mtd><mi>A</mi><mi>R</mi><mo>-</mo><mi>L</mi><mi>B</mi></mtd>
+   <mtd><mo>=</mo><mi>&#x3b1;</mi><mi>C</mi></mtd>
+</mtr><mtr>
+   <mtd><mi>D</mi><mi>R</mi><mo>-</mo><mi>L</mi><mi>E</mi></mtd>
+   <mtd><mo>=</mo><mi>&#x3b1;</mi><mi>F</mi><mtext>,</mtext></mtd>
+</mtr>
+</mtable>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+where
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>A</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mn>4.0</mn></mtd>
+   <mtd><mn>1.0</mn></mtd>
+   <mtd><mn>1.0</mn></mtd>
+   <mtd><mn>2.0</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom></mtd>
+   <mtd><mn>3.0</mn></mtd>
+   <mtd><mn>4.0</mn></mtd>
+   <mtd><mn>1.0</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom></mtd>
+   <mtd><mn>1.0</mn></mtd>
+   <mtd><mn>3.0</mn></mtd>
+   <mtd><mn>1.0</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom></mtd>
+   <mtd><mn>6.0</mn></mtd>
+</mtr>
+</mtable></mfenced>
+ <mtext>, &#x2003;</mtext>
+ <mi>B</mi><mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mn>1.0</mn></mtd>
+   <mtd><mn>1.0</mn></mtd>
+   <mtd><mn>1.0</mn></mtd>
+   <mtd><mn>1.0</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom></mtd>
+   <mtd><mn>3.0</mn></mtd>
+   <mtd><mn>4.0</mn></mtd>
+   <mtd><mn>1.0</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom></mtd>
+   <mtd><mn>1.0</mn></mtd>
+   <mtd><mn>3.0</mn></mtd>
+   <mtd><mn>1.0</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom></mtd>
+   <mtd><mn>4.0</mn></mtd>
+</mtr>
+</mtable></mfenced>
+ <mtext>,</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>D</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mn>2.0</mn></mtd>
+   <mtd><mn>1.0</mn></mtd>
+   <mtd><mn>1.0</mn></mtd>
+   <mtd><mn>3.0</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom></mtd>
+   <mtd><mn>1.0</mn></mtd>
+   <mtd><mn>2.0</mn></mtd>
+   <mtd><mn>1.0</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom></mtd>
+   <mtd><mn>1.0</mn></mtd>
+   <mtd><mn>1.0</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom></mtd>
+   <mtd><mn>2.0</mn></mtd>
+</mtr>
+</mtable></mfenced>
+ <mtext>, &#x2003;</mtext>
+ <mi>E</mi><mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mn>1.0</mn></mtd>
+   <mtd><mn>1.0</mn></mtd>
+   <mtd><mn>1.0</mn></mtd>
+   <mtd><mn>2.0</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom></mtd>
+   <mtd><mn>1.0</mn></mtd>
+   <mtd><mn>4.0</mn></mtd>
+   <mtd><mn>1.0</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom></mtd>
+   <mtd><mn>1.0</mn></mtd>
+   <mtd><mn>1.0</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom></mtd>
+   <mtd><mn>1.0</mn></mtd>
+</mtr>
+</mtable></mfenced>
+ <mtext>,</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>C</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>4.0</mn></mrow></mtd>
+   <mtd><mn>7.0</mn></mtd>
+   <mtd><mn>1.0</mn></mtd>
+   <mtd><mn>12.0</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>9.0</mn></mrow></mtd>
+   <mtd><mn>2.0</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>2.0</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>2.0</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>4.0</mn></mrow></mtd>
+   <mtd><mn>2.0</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>2.0</mn></mrow></mtd>
+   <mtd><mn>8.0</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>7.0</mn></mrow></mtd>
+   <mtd><mn>7.0</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>6.0</mn></mrow></mtd>
+   <mtd><mn>19.0</mn></mtd>
+</mtr>
+</mtable></mfenced>
+ <mtext>&#x2003; and &#x2003;</mtext>
+ <mi>F</mi><mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>7.0</mn></mrow></mtd>
+   <mtd><mn>5.0</mn></mtd>
+   <mtd><mn>0.0</mn></mtd>
+   <mtd><mn>7.0</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>5.0</mn></mrow></mtd>
+   <mtd><mn>1.0</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>8.0</mn></mrow></mtd>
+   <mtd><mn>0.0</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>1.0</mn></mrow></mtd>
+   <mtd><mn>2.0</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>3.0</mn></mrow></mtd>
+   <mtd><mn>5.0</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>3.0</mn></mrow></mtd>
+   <mtd><mn>2.0</mn></mtd>
+   <mtd><mn>0.0</mn></mtd>
+   <mtd><mn>5.0</mn></mtd>
+</mtr>
+</mtable></mfenced>
+ <mtext>.</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+</div>
+
+</body>
+</html>

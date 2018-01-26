@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>zsytrs example program</title>
+<link rel="stylesheet" href="styles/libdoc.css" type="text/css"/>
+<link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
+
+<h2 class="standard" id="example">
+ <div class="sec_name">Example program for zsytrs</div>
+</h2>
+<div class="paramtext">This example solves the system of equations <math><mi>A</mi><mi>X</mi><mo>=</mo><mi>B</mi></math>, where
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+<mi>A</mi><mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.39</mn></mrow><mo>-</mo><mn>0.71</mn><mi>i</mi></mtd>
+   <mtd><mn>5.14</mn><mo>-</mo><mn>0.64</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>7.86</mn></mrow><mo>-</mo><mn>2.96</mn><mi>i</mi></mtd>
+   <mtd><mn>3.80</mn><mo>+</mo><mn>0.92</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>5.14</mn><mo>-</mo><mn>0.64</mn><mi>i</mi></mtd>
+   <mtd><mn>8.86</mn><mo>+</mo><mn>1.81</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>3.52</mn></mrow><mo>+</mo><mn>0.58</mn><mi>i</mi></mtd>
+   <mtd><mn>5.32</mn><mo>-</mo><mn>1.59</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>7.86</mn></mrow><mo>-</mo><mn>2.96</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>3.52</mn></mrow><mo>+</mo><mn>0.58</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>2.83</mn></mrow><mo>-</mo><mn>0.03</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.54</mn></mrow><mo>-</mo><mn>2.86</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>3.80</mn><mo>+</mo><mn>0.92</mn><mi>i</mi></mtd>
+   <mtd><mn>5.32</mn><mo>-</mo><mn>1.59</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.54</mn></mrow><mo>-</mo><mn>2.86</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.56</mn></mrow><mo>+</mo><mn>0.12</mn><mi>i</mi></mtd>
+</mtr>
+</mtable></mfenced>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+and
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>B</mi><mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>55.64</mn></mrow><mo>+</mo><mn>41.22</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>19.09</mn></mrow><mo>-</mo><mn>35.97</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>48.18</mn></mrow><mo>+</mo><mn>66.00</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>12.08</mn></mrow><mo>-</mo><mn>27.02</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.49</mn></mrow><mo>-</mo><mphantom><mn>0</mn></mphantom><mn>1.47</mn><mi>i</mi></mtd>
+   <mtd><mn>6.95</mn><mo>+</mo><mn>20.49</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>6.43</mn></mrow><mo>+</mo><mn>19.24</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>4.59</mn></mrow><mo>-</mo><mn>35.53</mn><mi>i</mi></mtd>
+</mtr>
+</mtable></mfenced>
+<mtext>.</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+Here <math><mi>A</mi></math>&#xa0;is symmetric and must first be factorized by <a class="rout" href="zsytrf_example.html">zsytrf</a>.</div>
+
+</body>
+</html>

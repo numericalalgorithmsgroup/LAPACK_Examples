@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>dsygst example program</title>
+<link rel="stylesheet" href="styles/libdoc.css" type="text/css"/>
+<link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
+
+<h2 class="standard" id="example">
+ <div class="sec_name">Example program for dsygst</div>
+</h2>
+<div class="paramtext">This example computes all the eigenvalues of <math><mi>A</mi><mi>z</mi><mo>=</mo><mi>&#x3bb;</mi><mi>B</mi><mi>z</mi></math>, where
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>A</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mn>0.24</mn></mtd>
+   <mtd><mn>0.39</mn></mtd>
+   <mtd><mn>0.42</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.16</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.39</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.11</mn></mrow></mtd>
+   <mtd><mn>0.79</mn></mtd>
+   <mtd><mn>0.63</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.42</mn></mtd>
+   <mtd><mn>0.79</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.25</mn></mrow></mtd>
+   <mtd><mn>0.48</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.16</mn></mrow></mtd>
+   <mtd><mn>0.63</mn></mtd>
+   <mtd><mn>0.48</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.03</mn></mrow></mtd>
+</mtr>
+</mtable></mfenced>
+<mtext>&#x2003; and &#x2003;</mtext>
+ <mi>B</mi><mo>=</mo> <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mn>4.16</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>3.12</mn></mrow></mtd>
+   <mtd><mn>0.56</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.10</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>3.12</mn></mrow></mtd>
+   <mtd><mn>5.03</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.83</mn></mrow></mtd>
+   <mtd><mn>1.09</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.56</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.83</mn></mrow></mtd>
+   <mtd><mn>0.76</mn></mtd>
+   <mtd><mn>0.34</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.10</mn></mrow></mtd>
+   <mtd><mn>1.09</mn></mtd>
+   <mtd><mn>0.34</mn></mtd>
+   <mtd><mn>1.18</mn></mtd>
+</mtr>
+</mtable></mfenced>
+<mtext>.</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+Here <math><mi>B</mi></math>&#xa0;is symmetric positive definite and must first be factorized by <a class="rout" href="dpotrf_example.html">dpotrf</a>.  The program calls <b>dsygst</b> to reduce the problem to the standard form <math><mi>C</mi><mi>y</mi><mo>=</mo><mi>&#x3bb;</mi><mi>y</mi></math>; then <a class="rout" href="dsytrd_example.html">dsytrd</a> to reduce <math><mi>C</mi></math>&#xa0;to tridiagonal form, and <a class="rout" href="dsterf_example.html">dsterf</a> to compute the eigenvalues.</div>
+
+</body>
+</html>

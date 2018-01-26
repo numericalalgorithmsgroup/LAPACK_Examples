@@ -17,6 +17,7 @@ Once you've taken a copy of the repository, you'll find these items:
   * examples/source      - source code of individual LAPACK examples
   * examples/data        - input data files, one needed by each LAPACK example
   * examples/baseresults - expected result files (machine dependent)
+  * examples/doc         - A description of what problem each example solves
   * GNUmakefile          - a makefile that can be used (with minor modification)
                            to compile and run all the LAPACK examples
 

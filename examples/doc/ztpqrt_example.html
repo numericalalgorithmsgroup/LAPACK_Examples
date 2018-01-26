@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>ztpqrt example program</title>
+<link rel="stylesheet" href="styles/libdoc.css" type="text/css"/>
+<link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
+
+<h2 class="standard" id="example">
+ <div class="sec_name">Example program for ztpqrt</div>
+</h2>
+<div class="paramtext">This example finds the basic solutions for the linear least squares problems
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mrow><mi>minimize</mi><mo>&#x2061;</mo><msub><mfenced open="&#x2016;" close="&#x2016;" separators="">
+   <mi>A</mi><msub><mi>x</mi><mi>i</mi></msub>
+   <mo>-</mo>
+   <msub><mi>b</mi><mi>i</mi></msub>
+</mfenced><mn>2</mn></msub></mrow>
+ <mtext>, &#x2003;</mtext>
+ <mi>i</mi><mo>=</mo><mn>1</mn><mo>,</mo><mn>2</mn>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+where <math><msub><mi>b</mi><mn>1</mn></msub></math>&#xa0;and <math><msub><mi>b</mi><mn>2</mn></msub></math>&#xa0;are the columns of the matrix <math><mi>B</mi></math>,
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>A</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mn>0.96</mn><mo>-</mo><mn>0.81</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.03</mn></mrow><mo>+</mo><mn>0.96</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.91</mn></mrow><mo>+</mo><mn>2.06</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.05</mn></mrow><mo>+</mo><mn>0.41</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.98</mn></mrow><mo>+</mo><mn>1.98</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.20</mn></mrow><mo>+</mo><mn>0.19</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.66</mn></mrow><mo>+</mo><mn>0.42</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.81</mn></mrow><mo>+</mo><mn>0.56</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.62</mn><mo>-</mo><mn>0.46</mn><mi>i</mi></mtd>
+   <mtd><mn>1.01</mn><mo>+</mo><mn>0.02</mn><mi>i</mi></mtd>
+   <mtd><mn>0.63</mn><mo>-</mo><mn>0.17</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.11</mn></mrow><mo>+</mo><mn>0.60</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.37</mn></mrow><mo>+</mo><mn>0.38</mn><mi>i</mi></mtd>
+   <mtd><mn>0.19</mn><mo>-</mo><mn>0.54</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.98</mn></mrow><mo>-</mo><mn>0.36</mn><mi>i</mi></mtd>
+   <mtd><mn>0.22</mn><mo>-</mo><mn>0.20</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.83</mn><mo>+</mo><mn>0.51</mn><mi>i</mi></mtd>
+   <mtd><mn>0.20</mn><mo>+</mo><mn>0.01</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.17</mn></mrow><mo>-</mo><mn>0.46</mn><mi>i</mi></mtd>
+   <mtd><mn>1.47</mn><mo>+</mo><mn>1.59</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>1.08</mn><mo>-</mo><mn>0.28</mn><mi>i</mi></mtd>
+   <mtd><mn>0.20</mn><mo>-</mo><mn>0.12</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.07</mn></mrow><mo>+</mo><mn>1.23</mn><mi>i</mi></mtd>
+   <mtd><mn>0.26</mn><mo>+</mo><mn>0.26</mn><mi>i</mi></mtd>
+</mtr>
+</mtable></mfenced>
+ <mtext>&#x2003; and &#x2003;</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+<mi>B</mi><mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>2.09</mn></mrow><mo>+</mo><mn>1.93</mn><mi>i</mi></mtd>
+   <mtd><mn>3.26</mn><mo>-</mo><mn>2.70</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>3.34</mn><mo>-</mo><mn>3.53</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>6.22</mn></mrow><mo>+</mo><mn>1.16</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>4.94</mn></mrow><mo>-</mo><mn>2.04</mn><mi>i</mi></mtd>
+   <mtd><mn>7.94</mn><mo>-</mo><mn>3.13</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.17</mn><mo>+</mo><mn>4.23</mn><mi>i</mi></mtd>
+   <mtd><mn>1.04</mn><mo>-</mo><mn>4.26</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>5.19</mn></mrow><mo>+</mo><mn>3.63</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>2.31</mn></mrow><mo>-</mo><mn>2.12</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.98</mn><mo>+</mo><mn>2.53</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.39</mn></mrow><mo>-</mo><mn>4.05</mn><mi>i</mi></mtd>
+</mtr>
+</mtable></mfenced>
+ <mtext>.</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+A <math><mi>Q</mi><mi>R</mi></math>&#xa0;factorization is performed on the first <math><mn>4</mn></math>&#xa0;rows of <math><mi>A</mi></math>&#xa0;using <a class="rout" href="zgeqrt_example.html">zgeqrt</a> after which the first <math><mn>4</mn></math>&#xa0;rows of <math><mi>B</mi></math>&#xa0;are updated by applying <math><msup><mi>Q</mi><mi>T</mi></msup></math>&#xa0;using <a class="rout">zgemqrt</a>.  The remaining row is added by performing a <math><mi>Q</mi><mi>R</mi></math>&#xa0;update using <b>ztpqrt</b>; <math><mi>B</mi></math>&#xa0;is updated by applying the new <math><msup><mi>Q</mi><mi>T</mi></msup></math>&#xa0;using <a class="rout">ztpmqrt</a>; the solution is finally obtained by triangular solve using <math><mi>R</mi></math>&#xa0;from the updated <math><mi>Q</mi><mi>R</mi></math>.</div>
+
+</body>
+</html>

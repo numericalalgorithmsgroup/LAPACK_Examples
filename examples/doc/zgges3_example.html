@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>zgges3 example program</title>
+<link rel="stylesheet" href="styles/libdoc.css" type="text/css"/>
+<link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
+
+<h2 class="standard" id="example">
+ <div class="sec_name">Example program for zgges3</div>
+</h2>
+<div class="paramtext">This example finds the generalized Schur factorization of the matrix pair <math><mfenced separators=""><mi>A</mi><mo>,</mo><mi>B</mi></mfenced></math>, where
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>A</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>21.10</mn></mrow><mo>-</mo><mn>22.50</mn><mi>i</mi></mtd>
+   <mtd><mn>53.50</mn><mo>-</mo><mn>50.50</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>34.50</mn></mrow><mo>+</mo><mn>127.50</mn><mi>i</mi></mtd>
+   <mtd><mn>7.50</mn><mo>+</mo><mphantom><mn>0</mn></mphantom><mn>0.50</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.46</mn></mrow><mo>-</mo><mphantom><mn>0</mn></mphantom><mn>7.78</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>3.50</mn></mrow><mo>-</mo><mn>37.50</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>15.50</mn></mrow><mo>+</mo><mphantom><mn>0</mn></mphantom><mn>58.50</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>10.50</mn></mrow><mo>-</mo><mphantom><mn>0</mn></mphantom><mn>1.50</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>4.30</mn><mo>-</mo><mphantom><mn>0</mn></mphantom><mn>5.50</mn><mi>i</mi></mtd>
+   <mtd><mn>39.70</mn><mo>-</mo><mn>17.10</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>68.50</mn></mrow><mo>+</mo><mphantom><mn>0</mn></mphantom><mn>12.50</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>7.50</mn></mrow><mo>-</mo><mphantom><mn>0</mn></mphantom><mn>3.50</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>5.50</mn><mo>+</mo><mphantom><mn>0</mn></mphantom><mn>4.40</mn><mi>i</mi></mtd>
+   <mtd><mn>14.40</mn><mo>+</mo><mn>43.30</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>32.50</mn></mrow><mo>-</mo><mphantom><mn>0</mn></mphantom><mn>46.00</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>19.00</mn></mrow><mo>-</mo><mn>32.50</mn><mi>i</mi></mtd>
+</mtr>
+</mtable></mfenced>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+and
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>B</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mn>1.00</mn><mo>-</mo><mn>5.00</mn><mi>i</mi></mtd>
+   <mtd><mn>1.60</mn><mo>+</mo><mn>1.20</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>3.00</mn></mrow><mo>+</mo><mn>0.00</mn><mi>i</mi></mtd>
+   <mtd><mn>0.00</mn><mo>-</mo><mn>1.00</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.80</mn><mo>-</mo><mn>0.60</mn><mi>i</mi></mtd>
+   <mtd><mn>3.00</mn><mo>-</mo><mn>5.00</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>4.00</mn></mrow><mo>+</mo><mn>3.00</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>2.40</mn></mrow><mo>-</mo><mn>3.20</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>1.00</mn><mo>+</mo><mn>0.00</mn><mi>i</mi></mtd>
+   <mtd><mn>2.40</mn><mo>+</mo><mn>1.80</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>4.00</mn></mrow><mo>-</mo><mn>5.00</mn><mi>i</mi></mtd>
+   <mtd><mn>0.00</mn><mo>-</mo><mn>3.00</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.00</mn><mo>+</mo><mn>1.00</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.80</mn></mrow><mo>+</mo><mn>2.40</mn><mi>i</mi></mtd>
+   <mtd><mn>0.00</mn><mo>-</mo><mn>4.00</mn><mi>i</mi></mtd>
+   <mtd><mn>4.00</mn><mo>-</mo><mn>5.00</mn><mi>i</mi></mtd>
+</mtr>
+</mtable></mfenced>
+ <mtext>.</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>dtrsen example program</title>
+<link rel="stylesheet" href="styles/libdoc.css" type="text/css"/>
+<link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
+
+<h2 class="standard" id="example">
+ <div class="sec_name">Example program for dtrsen</div>
+</h2>
+<div class="paramtext">This example reorders the Schur factorization of the matrix <math><mi>A</mi><mo>=</mo><mi>Q</mi><mi>T</mi><msup><mi>Q</mi><mi mathvariant="normal">T</mi></msup></math>&#xa0;such that the two real eigenvalues appear as the leading elements on the diagonal of the reordered matrix <math><mover><mi>T</mi><mo>~</mo></mover></math>, where
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>T</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mn>0.7995</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.1144</mn></mrow></mtd>
+   <mtd><mn>0.0060</mn></mtd>
+   <mtd><mn>0.0336</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.0000</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.0994</mn></mrow></mtd>
+   <mtd><mn>0.2478</mn></mtd>
+   <mtd><mn>0.3474</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.0000</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.6483</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.0994</mn></mrow></mtd>
+   <mtd><mn>0.2026</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.0000</mn></mtd>
+   <mtd><mn>0.0000</mn></mtd>
+   <mtd><mn>0.0000</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.1007</mn></mrow></mtd>
+</mtr>
+</mtable></mfenced>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+and
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>Q</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mn>0.6551</mn></mtd>
+   <mtd><mn>0.1037</mn></mtd>
+   <mtd><mn>0.3450</mn></mtd>
+   <mtd><mn>0.6641</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.5236</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.5807</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.6141</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.1068</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.5362</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.3073</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.2935</mn></mrow></mtd>
+   <mtd><mn>0.7293</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.0956</mn></mtd>
+   <mtd><mn>0.7467</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.6463</mn></mrow></mtd>
+   <mtd><mn>0.1249</mn></mtd>
+</mtr>
+</mtable></mfenced>
+<mtext>.</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+</div><div class="paramtext">The example program for <b>dtrsen</b> illustrates the computation of error bounds for the eigenvalues.</div><div class="paramtext">The original matrix <math><mi>A</mi></math>&#xa0;is given in <a class="sec" href="dorghr_example.html"><b>dorghr</b></a>.</div>
+
+</body>
+</html>

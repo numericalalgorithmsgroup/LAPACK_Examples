@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>ztbrfs example program</title>
+<link rel="stylesheet" href="styles/libdoc.css" type="text/css"/>
+<link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
+
+<h2 class="standard" id="example">
+ <div class="sec_name">Example program for ztbrfs</div>
+</h2>
+<div class="paramtext">This example solves the system of equations <math><mi>A</mi><mi>X</mi><mo>=</mo><mi>B</mi></math>&#xa0;and to compute forward and backward error bounds, where
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+<mi>A</mi><mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>1.94</mn></mrow><mo>+</mo><mn>4.43</mn><mi>i</mi></mtd>
+   <mtd><mn>0.00</mn><mo>+</mo><mn>0.00</mn><mi>i</mi></mtd>
+   <mtd><mn>0.00</mn><mo>+</mo><mn>0.00</mn><mi>i</mi></mtd>
+   <mtd><mn>0.00</mn><mo>+</mo><mn>0.00</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>3.39</mn></mrow><mo>+</mo><mn>3.44</mn><mi>i</mi></mtd>
+   <mtd><mn>4.12</mn><mo>-</mo><mn>4.27</mn><mi>i</mi></mtd>
+   <mtd><mn>0.00</mn><mo>+</mo><mn>0.00</mn><mi>i</mi></mtd>
+   <mtd><mn>0.00</mn><mo>+</mo><mn>0.00</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>1.62</mn><mo>+</mo><mn>3.68</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.84</mn></mrow><mo>+</mo><mn>5.53</mn><mi>i</mi></mtd>
+   <mtd><mn>0.43</mn><mo>-</mo><mn>2.66</mn><mi>i</mi></mtd>
+   <mtd><mn>0.00</mn><mo>+</mo><mn>0.00</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.00</mn><mo>+</mo><mn>0.00</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>2.77</mn></mrow><mo>-</mo><mn>1.93</mn><mi>i</mi></mtd>
+   <mtd><mn>1.74</mn><mo>-</mo><mn>0.04</mn><mi>i</mi></mtd>
+   <mtd><mn>0.44</mn><mo>+</mo><mn>0.10</mn><mi>i</mi></mtd>
+</mtr>
+</mtable></mfenced>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+and
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>B</mi><mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>8.86</mn></mrow><mo>-</mo><mphantom><mn>0</mn></mphantom><mn>3.88</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>24.09</mn></mrow><mo>-</mo><mphantom><mn>0</mn></mphantom><mn>5.27</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>15.57</mn></mrow><mo>-</mo><mn>23.41</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>57.97</mn></mrow><mo>+</mo><mphantom><mn>0</mn></mphantom><mn>8.14</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>7.63</mn></mrow><mo>+</mo><mn>22.78</mn><mi>i</mi></mtd>
+   <mtd><mn>19.09</mn><mo>-</mo><mn>29.51</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>14.74</mn></mrow><mo>-</mo><mphantom><mn>0</mn></mphantom><mn>2.40</mn><mi>i</mi></mtd>
+   <mtd><mn>19.17</mn><mo>+</mo><mn>21.33</mn><mi>i</mi></mtd>
+</mtr>
+</mtable></mfenced>
+<mtext>.</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+</div>
+
+</body>
+</html>

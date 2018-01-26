@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>dggsvd example program</title>
+<link rel="stylesheet" href="styles/libdoc.css" type="text/css"/>
+<link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
+
+<h2 class="standard" id="example">
+ <div class="sec_name">Example program for dggsvd</div>
+</h2>
+<div class="paramtext">This example finds the generalized singular value decomposition
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>A</mi>
+ <mo>=</mo>
+ <mi>U</mi>
+ <msub><mi>&#x3a3;</mi><mn>1</mn></msub>
+  <mfenced><mtable>
+   <mtr>
+    <mtd><mn>0</mn></mtd><mtd><mi>R</mi></mtd>
+</mtr>
+</mtable></mfenced>
+ <msup><mi>Q</mi><mi mathvariant="normal">T</mi></msup>
+ <mtext>, &#x2003;</mtext>
+ <mi>B</mi>
+ <mo>=</mo>
+ <mi>V</mi>
+ <msub><mi>&#x3a3;</mi><mn>2</mn></msub>
+ <mfenced><mtable>
+  <mtr>
+   <mtd><mn>0</mn></mtd><mtd><mi>R</mi></mtd>
+</mtr>
+</mtable></mfenced>
+ <msup><mi>Q</mi><mi mathvariant="normal">T</mi></msup>
+ <mtext>,</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+where
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>A</mi>
+ <mo>=</mo>
+ <mfenced><mtable>
+  <mtr>
+   <mtd><mn>1</mn></mtd>
+   <mtd><mn>2</mn></mtd>
+   <mtd><mn>3</mn></mtd>
+</mtr><mtr>
+   <mtd><mn>3</mn></mtd>
+   <mtd><mn>2</mn></mtd>
+   <mtd><mn>1</mn></mtd>
+</mtr><mtr>
+   <mtd><mn>4</mn></mtd>
+   <mtd><mn>5</mn></mtd>
+   <mtd><mn>6</mn></mtd>
+</mtr><mtr>
+   <mtd><mn>7</mn></mtd>
+   <mtd><mn>8</mn></mtd>
+   <mtd><mn>8</mn></mtd>
+</mtr>
+</mtable></mfenced>
+ <mtext>&#x2003; and &#x2003;</mtext>
+ <mi>B</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+  <mtr>
+   <mtd><mrow><mo>-</mo><mn>2</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>3</mn></mrow></mtd>
+   <mtd><mn>3</mn></mtd>
+</mtr><mtr>
+   <mtd><mn>4</mn></mtd>
+   <mtd><mn>6</mn></mtd>
+   <mtd><mn>5</mn></mtd>
+</mtr>
+</mtable></mfenced>
+ <mtext>,</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+together with estimates for the condition number of <math><mi>R</mi></math>&#xa0;and the error bound for the computed generalized singular values.</div><div class="paramtext">The example program assumes that <math><mi>m</mi><mo>&#x2265;</mo><mi>n</mi></math>, and would need slight modification if this is not the case.</div>
+
+</body>
+</html>

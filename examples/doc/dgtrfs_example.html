@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>dgtrfs example program</title>
+<link rel="stylesheet" href="styles/libdoc.css" type="text/css"/>
+<link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
+
+<h2 class="standard" id="example">
+ <div class="sec_name">Example program for dgtrfs</div>
+</h2>
+<div class="paramtext">This example solves the equations
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>A</mi><mi>X</mi><mo>=</mo><mi>B</mi>
+ <mtext>,</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+where <math>
+ <mi>A</mi>
+</math>&#xa0;is the tridiagonal matrix
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>A</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mn>3.0</mn></mtd>
+   <mtd><mn>2.1</mn></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>3.4</mn></mtd>
+   <mtd><mn>2.3</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.0</mn></mrow></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom></mtd>
+   <mtd><mn>3.6</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>5.0</mn></mrow></mtd>
+   <mtd><mn>1.9</mn></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom></mtd>
+   <mtd><mn>7.0</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.9</mn></mrow></mtd>
+   <mtd><mn>8.0</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom></mtd>
+   <mtd><mrow><mo>-</mo><mn>6.0</mn></mrow></mtd>
+   <mtd><mn>7.1</mn></mtd>
+</mtr>
+</mtable></mfenced>
+<mtext>&#x2003; and &#x2003;</mtext>
+ <mi>B</mi>
+ <mo>=</mo>
+ <mfenced><mtable>
+   <mtr columnalign="right">
+   <mtd><mn>2.7</mn></mtd>
+    <mtd><mn>6.6</mn></mtd>
+</mtr><mtr columnalign="right">
+    <mtd><mrow><mo>-</mo><mn>0.5</mn></mrow></mtd>
+    <mtd><mn>10.8</mn></mtd>
+</mtr><mtr columnalign="right">
+    <mtd><mn>2.6</mn></mtd>
+    <mtd><mrow><mo>-</mo><mn>3.2</mn></mrow></mtd>
+</mtr><mtr columnalign="right">
+    <mtd><mn>0.6</mn></mtd>
+    <mtd><mrow><mo>-</mo><mn>11.2</mn></mrow></mtd>
+</mtr><mtr columnalign="right">
+    <mtd><mn>2.7</mn></mtd>
+    <mtd><mn>19.1</mn></mtd>
+</mtr>
+</mtable></mfenced>
+ <mtext>.</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+Estimates for the backward errors and forward errors are also output.</div>
+
+</body>
+</html>

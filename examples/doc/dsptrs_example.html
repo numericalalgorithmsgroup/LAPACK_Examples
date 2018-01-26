@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>dsptrs example program</title>
+<link rel="stylesheet" href="styles/libdoc.css" type="text/css"/>
+<link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
+
+<h2 class="standard" id="example">
+ <div class="sec_name">Example program for dsptrs</div>
+</h2>
+<div class="paramtext">This example solves the system of equations <math><mi>A</mi><mi>X</mi><mo>=</mo><mi>B</mi></math>, where
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+<mi>A</mi><mo>=</mo>
+ <mfenced><mtable>
+  <mtr columnalign="right">
+   <mtd><mn>2.07</mn></mtd>
+   <mtd><mn>3.87</mn></mtd>
+   <mtd><mn>4.20</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.15</mn></mrow></mtd>
+</mtr><mtr columnalign="right">
+   <mtd><mn>3.87</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.21</mn></mrow></mtd>
+   <mtd><mn>1.87</mn></mtd>
+   <mtd><mn>0.63</mn></mtd>
+</mtr><mtr columnalign="right">
+   <mtd><mn>4.20</mn></mtd>
+   <mtd><mn>1.87</mn></mtd>
+   <mtd><mn>1.15</mn></mtd>
+   <mtd><mn>2.06</mn></mtd>
+</mtr><mtr columnalign="right">
+   <mtd><mrow><mo>-</mo><mn>1.15</mn></mrow></mtd>
+   <mtd><mn>0.63</mn></mtd>
+   <mtd><mn>2.06</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.81</mn></mrow></mtd>
+</mtr>
+</mtable></mfenced>
+<mtext>&#x2003; and &#x2003;</mtext>
+ <mi>B</mi><mo>=</mo>
+ <mfenced><mtable>
+  <mtr columnalign="right">
+   <mtd><mrow><mo>-</mo><mn>9.50</mn></mrow></mtd>
+   <mtd><mn>27.85</mn></mtd>
+</mtr><mtr columnalign="right">
+   <mtd><mrow><mo>-</mo><mn>8.38</mn></mrow></mtd>
+   <mtd><mn>9.90</mn></mtd>
+</mtr><mtr columnalign="right">
+   <mtd><mrow><mo>-</mo><mn>6.07</mn></mrow></mtd>
+   <mtd><mn>19.25</mn></mtd>
+</mtr><mtr columnalign="right">
+   <mtd><mrow><mo>-</mo><mn>0.96</mn></mrow></mtd>
+   <mtd><mn>3.93</mn></mtd>
+</mtr>
+</mtable></mfenced>
+<mtext>.</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+Here <math><mi>A</mi></math>&#xa0;is symmetric indefinite, stored in packed form, and must first be factorized by <a class="rout" href="dsptrf_example.html">dsptrf</a>.</div>
+
+</body>
+</html>

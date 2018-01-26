@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>dggesx example program</title>
+<link rel="stylesheet" href="styles/libdoc.css" type="text/css"/>
+<link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
+
+<h2 class="standard" id="example">
+ <div class="sec_name">Example program for dggesx</div>
+</h2>
+<div class="paramtext">This example finds the generalized Schur factorization of the matrix pair <math><mfenced separators=""><mi>A</mi><mo>,</mo><mi>B</mi></mfenced></math>, where
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>A</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mn>3.9</mn></mtd>
+   <mtd><mn>12.5</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>34.5</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.5</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>4.3</mn></mtd>
+   <mtd><mn>21.5</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>47.5</mn></mrow></mtd>
+   <mtd><mn>7.5</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>4.3</mn></mtd>
+   <mtd><mn>21.5</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>43.5</mn></mrow></mtd>
+   <mtd><mn>3.5</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>4.4</mn></mtd>
+   <mtd><mn>26.0</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>46.0</mn></mrow></mtd>
+   <mtd><mn>6.0</mn></mtd>
+</mtr>
+</mtable></mfenced>
+ <mtext>&#x2003; and &#x2003;</mtext>
+ <mi>B</mi><mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mn>1.0</mn></mtd>
+   <mtd><mn>2.0</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>3.0</mn></mrow></mtd>
+   <mtd><mn>1.0</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>1.0</mn></mtd>
+   <mtd><mn>3.0</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>5.0</mn></mrow></mtd>
+   <mtd><mn>4.0</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>1.0</mn></mtd>
+   <mtd><mn>3.0</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>4.0</mn></mrow></mtd>
+   <mtd><mn>3.0</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>1.0</mn></mtd>
+   <mtd><mn>3.0</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>4.0</mn></mrow></mtd>
+   <mtd><mn>4.0</mn></mtd>
+</mtr>
+</mtable></mfenced>
+ <mtext>,</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+such that the real positive eigenvalues of <math><mfenced separators=""><mi>A</mi><mo>,</mo><mi>B</mi></mfenced></math>&#xa0;correspond to the top left diagonal elements of the generalized Schur form, <math><mfenced separators=""><mi>S</mi><mo>,</mo><mi>T</mi></mfenced></math>.  Estimates of the condition numbers for the selected eigenvalue cluster and corresponding deflating subspaces are also returned.</div><div class="paramtext">Note that the block size (NB) of <math><mn>64</mn></math>&#xa0;assumed in this example is not realistic for such a small problem, but should be suitable for large problems.</div>
+
+</body>
+</html>

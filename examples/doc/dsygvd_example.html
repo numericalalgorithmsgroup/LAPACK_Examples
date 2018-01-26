@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>dsygvd example program</title>
+<link rel="stylesheet" href="styles/libdoc.css" type="text/css"/>
+<link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
+
+<h2 class="standard" id="example">
+ <div class="sec_name">Example program for dsygvd</div>
+</h2>
+<div class="paramtext">This example finds all the eigenvalues and eigenvectors of the generalized symmetric eigenproblem <math>
+ <mi>A</mi><mi>B</mi><mi>z</mi><mo>=</mo><mi>&#x3bb;</mi><mi>z</mi>
+</math>, where
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>A</mi>
+ <mo>=</mo>
+  <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mn>0.24</mn></mtd>
+   <mtd><mn>0.39</mn></mtd>
+   <mtd><mn>0.42</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.16</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.39</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.11</mn></mrow></mtd>
+   <mtd><mn>0.79</mn></mtd>
+   <mtd><mn>0.63</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.42</mn></mtd>
+   <mtd><mn>0.79</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.25</mn></mrow></mtd>
+   <mtd><mn>0.48</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.16</mn></mrow></mtd>
+   <mtd><mn>0.63</mn></mtd>
+   <mtd><mn>0.48</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.03</mn></mrow></mtd>
+</mtr>
+</mtable></mfenced>
+<mtext>&#x2003; and &#x2003;</mtext>
+ <mi>B</mi>
+ <mo>=</mo>
+  <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mn>4.16</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>3.12</mn></mrow></mtd>
+   <mtd><mn>0.56</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.10</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>3.12</mn></mrow></mtd>
+   <mtd><mn>5.03</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.83</mn></mrow></mtd>
+   <mtd><mn>1.09</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.56</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.83</mn></mrow></mtd>
+   <mtd><mn>0.76</mn></mtd>
+   <mtd><mn>0.34</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.10</mn></mrow></mtd>
+   <mtd><mn>1.09</mn></mtd>
+   <mtd><mn>0.34</mn></mtd>
+   <mtd><mn>1.18</mn></mtd>
+</mtr>
+</mtable></mfenced>
+ <mtext>,</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+together with an estimate of the condition number of <math><mi>B</mi></math>, and approximate error bounds for the computed eigenvalues and eigenvectors.</div><div class="paramtext">The example program for <a class="rout" href="dsygv_example.html">dsygv</a> illustrates solving a generalized symmetric eigenproblem of the form <math>
+ <mi>A</mi><mi>z</mi><mo>=</mo><mi>&#x3bb;</mi><mi>B</mi><mi>z</mi>
+</math>.</div>
+
+</body>
+</html>

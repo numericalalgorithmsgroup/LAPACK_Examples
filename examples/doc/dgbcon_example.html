@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>dgbcon example program</title>
+<link rel="stylesheet" href="styles/libdoc.css" type="text/css"/>
+<link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
+
+<h2 class="standard" id="example">
+ <div class="sec_name">Example program for dgbcon</div>
+</h2>
+<div class="paramtext">This example estimates the condition number in the <math><mn>1</mn></math>-norm of the matrix <math><mi>A</mi></math>, where
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+<mi>A</mi><mo>=</mo>
+ <mfenced><mtable>
+  <mtr columnalign="right">
+   <mtd><mrow><mo>-</mo><mn>0.23</mn></mrow></mtd>
+   <mtd><mn>2.54</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>3.66</mn></mrow></mtd>
+   <mtd><mn>0.00</mn></mtd>
+</mtr><mtr columnalign="right">
+   <mtd><mrow><mo>-</mo><mn>6.98</mn></mrow></mtd>
+   <mtd><mn>2.46</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>2.73</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>2.13</mn></mrow></mtd>
+</mtr><mtr columnalign="right">
+   <mtd><mn>0.00</mn></mtd>
+   <mtd><mn>2.56</mn></mtd>
+   <mtd><mn>2.46</mn></mtd>
+   <mtd><mn>4.07</mn></mtd>
+</mtr><mtr columnalign="right">
+   <mtd><mn>0.00</mn></mtd>
+   <mtd><mn>0.00</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>4.78</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>3.82</mn></mrow></mtd>
+</mtr>
+</mtable></mfenced>
+<mtext>.</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+Here <math><mi>A</mi></math>&#xa0;is nonsymmetric and is treated as a band matrix, which must first be factorized by <a class="rout" href="dgbtrf_example.html">dgbtrf</a>.  The true condition number in the <math><mn>1</mn></math>-norm is <math><mn>56.40</mn></math>.</div>
+
+</body>
+</html>

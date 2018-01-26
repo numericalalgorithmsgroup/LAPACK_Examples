@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>dtgevc example program</title>
+<link rel="stylesheet" href="styles/libdoc.css" type="text/css"/>
+<link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
+
+<h2 class="standard" id="example">
+ <div class="sec_name">Example program for dtgevc</div>
+</h2>
+<div class="paramtext">This example computes the <math><mi>&#x3b1;</mi></math>&#xa0;and <math><mi>&#x3b2;</mi></math>&#xa0;arguments, which defines the generalized eigenvalues and the corresponding left and right eigenvectors, of the matrix pair <math><mfenced separators=""><mi>A</mi><mo>,</mo><mi>B</mi></mfenced></math>&#xa0;given by
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>A</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mn>1.0</mn></mtd>
+   <mtd><mn>1.0</mn></mtd>
+   <mtd><mn>1.0</mn></mtd>
+   <mtd><mn>1.0</mn></mtd>
+   <mtd><mn>1.0</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>2.0</mn></mtd>
+   <mtd><mn>4.0</mn></mtd>
+   <mtd><mn>8.0</mn></mtd>
+   <mtd><mn>16.0</mn></mtd>
+   <mtd><mn>32.0</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>3.0</mn></mtd>
+   <mtd><mn>9.0</mn></mtd>
+   <mtd><mn>27.0</mn></mtd>
+   <mtd><mn>81.0</mn></mtd>
+   <mtd><mn>243.0</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>4.0</mn></mtd>
+   <mtd><mn>16.0</mn></mtd>
+   <mtd><mn>64.0</mn></mtd>
+   <mtd><mn>256.0</mn></mtd>
+   <mtd><mn>1024.0</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>5.0</mn></mtd>
+   <mtd><mn>25.0</mn></mtd>
+   <mtd><mn>125.0</mn></mtd>
+   <mtd><mn>625.0</mn></mtd>
+   <mtd><mn>3125.0</mn></mtd>
+</mtr>
+</mtable></mfenced>
+<mtext>&#x2003; and &#x2003;</mtext>
+ <mi>B</mi><mo>=</mo> <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mn>1.0</mn></mtd>
+   <mtd><mn>2.0</mn></mtd>
+   <mtd><mn>3.0</mn></mtd>
+   <mtd><mn>4.0</mn></mtd>
+   <mtd><mn>5.0</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>1.0</mn></mtd>
+   <mtd><mn>4.0</mn></mtd>
+   <mtd><mn>9.0</mn></mtd>
+   <mtd><mn>16.0</mn></mtd>
+   <mtd><mn>25.0</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>1.0</mn></mtd>
+   <mtd><mn>8.0</mn></mtd>
+   <mtd><mn>27.0</mn></mtd>
+   <mtd><mn>64.0</mn></mtd>
+   <mtd><mn>125.0</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>1.0</mn></mtd>
+   <mtd><mn>16.0</mn></mtd>
+   <mtd><mn>81.0</mn></mtd>
+   <mtd><mn>256.0</mn></mtd>
+   <mtd><mn>625.0</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>1.0</mn></mtd>
+   <mtd><mn>32.0</mn></mtd>
+   <mtd><mn>243.0</mn></mtd>
+   <mtd><mn>1024.0</mn></mtd>
+   <mtd><mn>3125.0</mn></mtd>
+</mtr>
+</mtable></mfenced>
+<mtext>.</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+To compute generalized eigenvalues, it is required to call five routines: <a class="rout">dggbal</a> to balance the matrix, <a class="rout" href="dgeqrf_example.html">dgeqrf</a> to perform the <math><mi>Q</mi><mi>R</mi></math>&#xa0;factorization of <math><mi>B</mi></math>, <a class="rout">dormqr</a> to apply <math><mi>Q</mi></math>&#xa0;to <math><mi>A</mi></math>, <a class="rout">dgghrd</a> to reduce the matrix pair to the generalized Hessenberg form and <a class="rout" href="dhgeqz_example.html">dhgeqz</a> to compute the eigenvalues via the <math><mi>Q</mi><mi>Z</mi></math>&#xa0;algorithm.</div><div class="paramtext">The computation of generalized eigenvectors is done by calling <b>dtgevc</b> to compute the eigenvectors of the balanced matrix pair.  The routine <a class="rout">dggbak</a> is called to backward transform the eigenvectors to the user-supplied matrix pair.  If both left and right eigenvectors are required then <a class="rout">dggbak</a> must be called twice.</div>
+
+</body>
+</html>

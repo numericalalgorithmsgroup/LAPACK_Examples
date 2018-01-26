@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>dgeqlf example program</title>
+<link rel="stylesheet" href="styles/libdoc.css" type="text/css"/>
+<link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
+
+<h2 class="standard" id="example">
+ <div class="sec_name">Example program for dgeqlf</div>
+</h2>
+<div class="paramtext">This example solves the linear least squares problems
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <munder><mi mathvariant="normal">min</mi><mi>x</mi></munder><mspace width="0.25em"/>
+ <msub><mfenced open="&#x2016;" close="&#x2016;" separators="">
+  <msub><mi>b</mi><mi>j</mi></msub>
+  <mo>-</mo>
+  <mi>A</mi><msub><mi>x</mi><mi>j</mi></msub>
+</mfenced><mn>2</mn></msub>
+ <mtext>, &#x200b;</mtext>
+ <mi>j</mi><mo>=</mo><mn>1</mn><mo>,</mo><mn>2</mn>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+for <math><msub><mi>x</mi><mn>1</mn></msub></math>&#xa0;and <math><msub><mi>x</mi><mn>2</mn></msub></math>, where <math><msub><mi>b</mi><mi>j</mi></msub></math>&#xa0;is the <math><mi>j</mi></math>th column of the matrix <math><mi>B</mi></math>,
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>A</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.57</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.28</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.39</mn></mrow></mtd>
+   <mtd><mn>0.25</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>1.93</mn></mrow></mtd>
+   <mtd><mn>1.08</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.31</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>2.14</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>2.30</mn></mtd>
+   <mtd><mn>0.24</mn></mtd>
+   <mtd><mn>0.40</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.35</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>1.93</mn></mrow></mtd>
+   <mtd><mn>0.64</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.66</mn></mrow></mtd>
+   <mtd><mn>0.08</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.15</mn></mtd>
+   <mtd><mn>0.30</mn></mtd>
+   <mtd><mn>0.15</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>2.13</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.02</mn></mrow></mtd>
+   <mtd><mn>1.03</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.43</mn></mrow></mtd>
+   <mtd><mn>0.50</mn></mtd>
+</mtr>
+</mtable></mfenced>
+ <mtext>&#x2003; and &#x2003;</mtext>
+ <mi>B</mi><mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>2.67</mn></mrow></mtd>
+   <mtd><mn>0.41</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.55</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>3.10</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>3.34</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>4.01</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.77</mn></mrow></mtd>
+   <mtd><mn>2.76</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.48</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>6.17</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>4.10</mn></mtd>
+   <mtd><mn>0.21</mn></mtd>
+</mtr>
+</mtable></mfenced>
+ <mtext>.</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+</div><div class="paramtext">The solution is obtained by first obtaining a <math><mi>Q</mi><mi>L</mi></math>&#xa0;factorization of the matrix <math><mi>A</mi></math>.</div><div class="paramtext">Note that the block size (NB) of <math><mn>64</mn></math>&#xa0;assumed in this example is not realistic for such a small problem, but should be suitable for large problems.</div>
+
+</body>
+</html>

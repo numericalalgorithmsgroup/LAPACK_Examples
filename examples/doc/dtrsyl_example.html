@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>dtrsyl example program</title>
+<link rel="stylesheet" href="styles/libdoc.css" type="text/css"/>
+<link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
+
+<h2 class="standard" id="example">
+ <div class="sec_name">Example program for dtrsyl</div>
+</h2>
+<div class="paramtext">This example solves the Sylvester equation <math><mi>A</mi><mi>X</mi><mo>+</mo><mi>X</mi><mi>B</mi><mo>=</mo><mi>C</mi></math>, where
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>A</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mn>0.10</mn></mtd>
+   <mtd><mn>0.50</mn></mtd>
+   <mtd><mn>0.68</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.21</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.50</mn></mrow></mtd>
+   <mtd><mn>0.10</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.24</mn></mrow></mtd>
+   <mtd><mn>0.67</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.00</mn></mtd>
+   <mtd><mn>0.00</mn></mtd>
+   <mtd><mn>0.19</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.35</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.00</mn></mtd>
+   <mtd><mn>0.00</mn></mtd>
+   <mtd><mn>0.00</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.72</mn></mrow></mtd>
+</mtr>
+</mtable></mfenced>
+<mtext>,</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>B</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.99</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.17</mn></mrow></mtd>
+   <mtd><mn>0.39</mn></mtd>
+   <mtd><mn>0.58</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.00</mn></mtd>
+   <mtd><mn>0.48</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.84</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.15</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.00</mn></mtd>
+   <mtd><mn>0.00</mn></mtd>
+   <mtd><mn>0.75</mn></mtd>
+   <mtd><mn>0.25</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.00</mn></mtd>
+   <mtd><mn>0.00</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.25</mn></mrow></mtd>
+   <mtd><mn>0.75</mn></mtd>
+</mtr>
+</mtable></mfenced>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+and
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>C</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mn>0.63</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.56</mn></mrow></mtd>
+   <mtd><mn>0.08</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.23</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.45</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.31</mn></mrow></mtd>
+   <mtd><mn>0.27</mn></mtd>
+   <mtd><mn>1.21</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.20</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.35</mn></mrow></mtd>
+   <mtd><mn>0.41</mn></mtd>
+   <mtd><mn>0.84</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.49</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.05</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.52</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.08</mn></mrow></mtd>
+</mtr>
+</mtable></mfenced>
+<mtext>.</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+</div>
+
+</body>
+</html>

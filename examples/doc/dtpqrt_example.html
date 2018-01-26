@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>dtpqrt example program</title>
+<link rel="stylesheet" href="styles/libdoc.css" type="text/css"/>
+<link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
+
+<h2 class="standard" id="example">
+ <div class="sec_name">Example program for dtpqrt</div>
+</h2>
+<div class="paramtext">This example finds the basic solutions for the linear least squares problems
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mrow><mi>minimize</mi><mo>&#x2061;</mo><msub><mfenced open="&#x2016;" close="&#x2016;" separators="">
+   <mi>A</mi><msub><mi>x</mi><mi>i</mi></msub>
+   <mo>-</mo>
+   <msub><mi>b</mi><mi>i</mi></msub>
+</mfenced><mn>2</mn></msub></mrow>
+ <mtext>, &#x2003;</mtext>
+ <mi>i</mi><mo>=</mo><mn>1</mn><mo>,</mo><mn>2</mn>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+where <math><msub><mi>b</mi><mn>1</mn></msub></math>&#xa0;and <math><msub><mi>b</mi><mn>2</mn></msub></math>&#xa0;are the columns of the matrix <math><mi>B</mi></math>,
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>A</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.57</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.28</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.39</mn></mrow></mtd>
+   <mtd><mn>0.25</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>1.93</mn></mrow></mtd>
+   <mtd><mn>1.08</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.31</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>2.14</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>2.30</mn></mtd>
+   <mtd><mn>0.24</mn></mtd>
+   <mtd><mn>0.40</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.35</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>1.93</mn></mrow></mtd>
+   <mtd><mn>0.64</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.66</mn></mrow></mtd>
+   <mtd><mn>0.08</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.15</mn></mtd>
+   <mtd><mn>0.30</mn></mtd>
+   <mtd><mn>0.15</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>2.13</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.02</mn></mrow></mtd>
+   <mtd><mn>1.03</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.43</mn></mrow></mtd>
+   <mtd><mn>0.50</mn></mtd>
+</mtr>
+</mtable></mfenced>
+ <mtext>&#x2003; and &#x2003;</mtext><mi>B</mi><mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>2.67</mn></mrow></mtd>
+   <mtd><mn>0.41</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.55</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>3.10</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>3.34</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>4.01</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.77</mn></mrow></mtd>
+   <mtd><mn>2.76</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.48</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>6.17</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>4.10</mn></mtd>
+   <mtd><mn>0.21</mn></mtd>
+</mtr>
+</mtable></mfenced>
+ <mtext>.</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+A <math><mi>Q</mi><mi>R</mi></math>&#xa0;factorization is performed on the first <math><mn>4</mn></math>&#xa0;rows of <math><mi>A</mi></math>&#xa0;using <a class="rout" href="dgeqrt_example.html">dgeqrt</a> after which the first <math><mn>4</mn></math>&#xa0;rows of <math><mi>B</mi></math>&#xa0;are updated by applying <math><msup><mi>Q</mi><mi>T</mi></msup></math>&#xa0;using <a class="rout">dgemqrt</a>.  The remaining row is added by performing a <math><mi>Q</mi><mi>R</mi></math>&#xa0;update using <b>dtpqrt</b>; <math><mi>B</mi></math>&#xa0;is updated by applying the new <math><msup><mi>Q</mi><mi>T</mi></msup></math>&#xa0;using <a class="rout">dtpmqrt</a>; the solution is finally obtained by triangular solve using <math><mi>R</mi></math>&#xa0;from the updated <math><mi>Q</mi><mi>R</mi></math>.</div>
+
+</body>
+</html>

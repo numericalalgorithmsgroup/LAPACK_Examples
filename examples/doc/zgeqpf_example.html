@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>zgeqpf example program</title>
+<link rel="stylesheet" href="styles/libdoc.css" type="text/css"/>
+<link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
+
+<h2 class="standard" id="example">
+ <div class="sec_name">Example program for zgeqpf</div>
+</h2>
+<div class="paramtext">This example solves the linear least squares problems
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mrow><mi>minimize</mi><mo>&#x2061;</mo><msub><mfenced open="&#x2016;" close="&#x2016;" separators="">
+   <mi>A</mi><msub><mi>x</mi><mi>i</mi></msub>
+   <mo>-</mo>
+   <msub><mi>b</mi><mi>i</mi></msub>
+</mfenced><mn>2</mn></msub></mrow>
+ <mtext>, &#x2003;</mtext>
+ <mi>i</mi><mo>=</mo><mn>1</mn><mo>,</mo><mn>2</mn>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+where <math><msub><mi>b</mi><mn>1</mn></msub></math>&#xa0;and <math><msub><mi>b</mi><mn>2</mn></msub></math>&#xa0;are the columns of the matrix <math><mi>B</mi></math>,
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>A</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mn>0.47</mn><mo>-</mo><mn>0.34</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.40</mn></mrow><mo>+</mo><mn>0.54</mn><mi>i</mi></mtd>
+   <mtd><mn>0.60</mn><mo>+</mo><mn>0.01</mn><mi>i</mi></mtd>
+   <mtd><mn>0.80</mn><mo>-</mo><mn>1.02</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.32</mn></mrow><mo>-</mo><mn>0.23</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.05</mn></mrow><mo>+</mo><mn>0.20</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.26</mn></mrow><mo>-</mo><mn>0.44</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.43</mn></mrow><mo>+</mo><mn>0.17</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.35</mn><mo>-</mo><mn>0.60</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.52</mn></mrow><mo>-</mo><mn>0.34</mn><mi>i</mi></mtd>
+   <mtd><mn>0.87</mn><mo>-</mo><mn>0.11</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.34</mn></mrow><mo>-</mo><mn>0.09</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.89</mn><mo>+</mo><mn>0.71</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.45</mn></mrow><mo>-</mo><mn>0.45</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.02</mn></mrow><mo>-</mo><mn>0.57</mn><mi>i</mi></mtd>
+   <mtd><mn>1.14</mn><mo>-</mo><mn>0.78</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.19</mn></mrow><mo>+</mo><mn>0.06</mn><mi>i</mi></mtd>
+   <mtd><mn>0.11</mn><mo>-</mo><mn>0.85</mn><mi>i</mi></mtd>
+   <mtd><mn>1.44</mn><mo>+</mo><mn>0.80</mn><mi>i</mi></mtd>
+   <mtd><mn>0.07</mn><mo>+</mo><mn>1.14</mn><mi>i</mi></mtd>
+</mtr>
+</mtable></mfenced>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+and
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>B</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.85</mn></mrow><mo>-</mo><mn>1.63</mn><mi>i</mi></mtd>
+   <mtd><mn>2.49</mn><mo>+</mo><mn>4.01</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>2.16</mn></mrow><mo>+</mo><mn>3.52</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.14</mn></mrow><mo>+</mo><mn>7.98</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>4.57</mn><mo>-</mo><mn>5.71</mn><mi>i</mi></mtd>
+   <mtd><mn>8.36</mn><mo>-</mo><mn>0.28</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>6.38</mn><mo>-</mo><mn>7.40</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>3.55</mn></mrow><mo>+</mo><mn>1.29</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>8.41</mn><mo>+</mo><mn>9.39</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>6.72</mn></mrow><mo>+</mo><mn>5.03</mn><mi>i</mi></mtd>
+</mtr>
+</mtable></mfenced>
+ <mtext>.</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+Here <math><mi>A</mi></math>&#xa0;is approximately rank-deficient, and hence it is preferable to use <b>zgeqpf</b> rather than <a class="rout" href="zgeqrf_example.html">zgeqrf</a>.</div>
+
+</body>
+</html>

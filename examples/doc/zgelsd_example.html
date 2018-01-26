@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>zgelsd example program</title>
+<link rel="stylesheet" href="styles/libdoc.css" type="text/css"/>
+<link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
+
+<h2 class="standard" id="example">
+ <div class="sec_name">Example program for zgelsd</div>
+</h2>
+<div class="paramtext">This example solves the linear least squares problem
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <munder><mi mathvariant="normal">min</mi><mi>x</mi></munder><mspace width="0.25em"/>
+ <msub><mfenced open="&#x2016;" close="&#x2016;" separators=""><mi>b</mi><mo>-</mo><mi>A</mi><mi>x</mi></mfenced><mn>2</mn></msub>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+for the solution, <math><mi>x</mi></math>, of minimum norm, where
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>A</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mn>0.47</mn><mo>-</mo><mn>0.34</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.32</mn></mrow><mo>-</mo><mn>0.23</mn><mi>i</mi></mtd>
+   <mtd><mn>0.35</mn><mo>-</mo><mn>0.60</mn><mi>i</mi></mtd>
+   <mtd><mn>0.89</mn><mo>+</mo><mn>0.71</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.19</mn></mrow><mo>+</mo><mn>0.06</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.40</mn></mrow><mo>+</mo><mn>0.54</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.05</mn></mrow><mo>+</mo><mn>0.20</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.52</mn></mrow><mo>-</mo><mn>0.34</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.45</mn></mrow><mo>-</mo><mn>0.45</mn><mi>i</mi></mtd>
+   <mtd><mn>0.11</mn><mo>-</mo><mn>0.85</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.60</mn><mo>+</mo><mn>0.01</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.26</mn></mrow><mo>-</mo><mn>0.44</mn><mi>i</mi></mtd>
+   <mtd><mn>0.87</mn><mo>-</mo><mn>0.11</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.02</mn></mrow><mo>-</mo><mn>0.57</mn><mi>i</mi></mtd>
+   <mtd><mn>1.44</mn><mo>+</mo><mn>0.80</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.80</mn><mo>-</mo><mn>1.02</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.43</mn></mrow><mo>+</mo><mn>0.17</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.34</mn></mrow><mo>-</mo><mn>0.09</mn><mi>i</mi></mtd>
+   <mtd><mn>1.14</mn><mo>-</mo><mn>0.78</mn><mi>i</mi></mtd>
+   <mtd><mn>0.07</mn><mo>+</mo><mn>1.14</mn><mi>i</mi></mtd>
+</mtr>
+</mtable></mfenced>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+and
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>b</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mn>2.15</mn><mo>-</mo><mn>0.20</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>2.24</mn></mrow><mo>+</mo><mn>1.82</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>4.45</mn><mo>-</mo><mn>4.28</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>5.70</mn><mo>-</mo><mn>6.25</mn><mi>i</mi></mtd>
+</mtr>
+</mtable></mfenced>
+ <mtext>.</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+</div><div class="paramtext">A tolerance of <math><mn>0.01</mn></math>&#xa0;is used to determine the effective rank of <math><mi>A</mi></math>.</div><div class="paramtext">Note that the block size (NB) of <math><mn>64</mn></math>&#xa0;assumed in this example is not realistic for such a small problem, but should be suitable for large problems.</div>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>zgesvx example program</title>
+<link rel="stylesheet" href="styles/libdoc.css" type="text/css"/>
+<link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
+
+<h2 class="standard" id="example">
+ <div class="sec_name">Example program for zgesvx</div>
+</h2>
+<div class="paramtext">This example solves the equations
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+<mi>A</mi><mi>X</mi><mo>=</mo><mi>B</mi>
+ <mtext>,</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+where <math><mi>A</mi></math>&#xa0;is the general matrix
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>A</mi><mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>1.34</mn></mrow><mo>+</mo><mphantom><mn>0</mn></mphantom><mn>2.55</mn><mi>i</mi></mtd>
+   <mtd><mn>0.28</mn><mo>+</mo><mn>3.17</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>6.39</mn></mrow><mo>-</mo><mphantom><mn>0</mn></mphantom><mn>2.20</mn><mi>i</mi></mtd>
+   <mtd><mn>0.72</mn><mo>-</mo><mphantom><mn>0</mn></mphantom><mn>0.92</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>1.70</mn></mrow><mo>-</mo><mn>14.10</mn><mi>i</mi></mtd>
+   <mtd><mn>33.10</mn><mo>-</mo><mn>1.50</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.50</mn></mrow><mo>+</mo><mn>13.40</mn><mi>i</mi></mtd>
+   <mtd><mn>12.90</mn><mo>+</mo><mn>13.80</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>3.29</mn></mrow><mo>-</mo><mphantom><mn>0</mn></mphantom><mn>2.39</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.91</mn></mrow><mo>+</mo><mn>4.42</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.14</mn></mrow><mo>-</mo><mphantom><mn>0</mn></mphantom><mn>1.35</mn><mi>i</mi></mtd>
+   <mtd><mn>1.72</mn><mo>+</mo><mphantom><mn>0</mn></mphantom><mn>1.35</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>2.41</mn><mo>+</mo><mphantom><mn>0</mn></mphantom><mn>0.39</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.56</mn></mrow><mo>+</mo><mn>1.47</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.83</mn></mrow><mo>-</mo><mphantom><mn>0</mn></mphantom><mn>0.69</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.96</mn></mrow><mo>+</mo><mphantom><mn>0</mn></mphantom><mn>0.67</mn><mi>i</mi></mtd>
+</mtr>
+</mtable></mfenced>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+and
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>B</mi><mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mn>26.26</mn><mo>+</mo><mn>51.78</mn><mi>i</mi></mtd>
+   <mtd><mn>31.32</mn><mo>-</mo><mphantom><mn>0</mn></mphantom><mn>6.70</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>64.30</mn><mo>-</mo><mn>86.80</mn><mi>i</mi></mtd>
+   <mtd><mn>158.60</mn><mo>-</mo><mn>14.20</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>5.75</mn></mrow><mo>+</mo><mn>25.31</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>2.15</mn></mrow><mo>+</mo><mn>30.19</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>1.16</mn><mo>+</mo><mphantom><mn>0</mn></mphantom><mn>2.57</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>2.56</mn></mrow><mo>+</mo><mphantom><mn>0</mn></mphantom><mn>7.55</mn><mi>i</mi></mtd>
+</mtr>
+</mtable></mfenced>
+ <mtext>.</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+</div><div class="paramtext">Error estimates for the solutions, information on scaling, an estimate of the reciprocal of the condition number of the scaled matrix <math><mi>A</mi></math>&#xa0;and an estimate of the reciprocal of the pivot growth factor for the factorization of <math><mi>A</mi></math>&#xa0;are also output.</div>
+
+</body>
+</html>

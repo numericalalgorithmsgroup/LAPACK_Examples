@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>dgglse example program</title>
+<link rel="stylesheet" href="styles/libdoc.css" type="text/css"/>
+<link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
+
+<h2 class="standard" id="example">
+ <div class="sec_name">Example program for dgglse</div>
+</h2>
+<div class="paramtext">This example solves the least squares problem
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <munder>
+  <mi mathvariant="normal">minimize</mi>
+  <mi>x</mi>
+</munder><mspace width="0.25em"/>
+ <msub><mfenced open="&#x2016;" close="&#x2016;" separators=""><mi>c</mi><mo>-</mo><mi>A</mi><mi>x</mi></mfenced><mn>2</mn></msub>
+ <mtext>&#x2003; subject to &#x2003;</mtext>
+ <mi>B</mi><mi>x</mi><mo>=</mo><mi>d</mi>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+where
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>c</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>1.50</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>2.14</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>1.23</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.54</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>1.68</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.82</mn></mtd>
+</mtr>
+</mtable></mfenced>
+ <mtext>,</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>A</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.57</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.28</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.39</mn></mrow></mtd>
+   <mtd><mn>0.25</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>1.93</mn></mrow></mtd>
+   <mtd><mn>1.08</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.31</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>2.14</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>2.30</mn></mtd>
+   <mtd><mn>0.24</mn></mtd>
+   <mtd><mn>0.40</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.35</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>1.93</mn></mrow></mtd>
+   <mtd><mn>0.64</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.66</mn></mrow></mtd>
+   <mtd><mn>0.08</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.15</mn></mtd>
+   <mtd><mn>0.30</mn></mtd>
+   <mtd><mn>0.15</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>2.13</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.02</mn></mrow></mtd>
+   <mtd><mn>1.03</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.43</mn></mrow></mtd>
+   <mtd><mn>0.50</mn></mtd>
+</mtr>
+</mtable></mfenced>
+ <mtext>,</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>B</mi>
+ <mo>=</mo>
+ <mfenced><mtable>
+  <mtr>
+   <mtd><mn>1.0</mn></mtd>
+   <mtd><mn>0</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.0</mn></mrow></mtd>
+   <mtd><mn>0</mn></mtd>
+</mtr><mtr>
+   <mtd><mn>0</mn></mtd>
+   <mtd><mn>1.0</mn></mtd>
+   <mtd><mn>0</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.0</mn></mrow></mtd>
+</mtr>
+</mtable></mfenced>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+and
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>d</mi>
+ <mo>=</mo>
+ <mfenced><mtable>
+  <mtr>
+   <mtd><mn>0</mn></mtd>
+</mtr><mtr>
+   <mtd><mn>0</mn></mtd>
+</mtr>
+</mtable></mfenced>
+ <mtext>.</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+</div><div class="paramtext">The constraints <math>
+ <mi>B</mi><mi>x</mi><mo>=</mo><mi>d</mi>
+</math>&#xa0;correspond to <math>
+ <msub><mi>x</mi><mn>1</mn></msub>
+ <mo>=</mo>
+ <msub><mi>x</mi><mn>3</mn></msub>
+</math>&#xa0;and <math>
+ <msub><mi>x</mi><mn>2</mn></msub>
+ <mo>=</mo>
+ <msub><mi>x</mi><mn>4</mn></msub>
+</math>.</div>
+
+</body>
+</html>

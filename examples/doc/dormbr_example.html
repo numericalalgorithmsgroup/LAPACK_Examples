@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>dormbr example program</title>
+<link rel="stylesheet" href="styles/libdoc.css" type="text/css"/>
+<link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
+
+<h2 class="standard" id="example">
+ <div class="sec_name">Example program for dormbr</div>
+</h2>
+<div class="paramtext">For this routine two examples are presented.  Both illustrate how the reduction to bidiagonal form of a matrix <math><mi>A</mi></math>&#xa0;may be preceded by a <math><mi>Q</mi><mi>R</mi></math>&#xa0;or <math><mi>L</mi><mi>Q</mi></math>&#xa0;factorization of <math><mi>A</mi></math>.</div><div class="paramtext">In the first example, <math><mi>m</mi><mo>&gt;</mo><mi>n</mi></math>, and
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>A</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.57</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.28</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.39</mn></mrow></mtd>
+   <mtd><mn>0.25</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>1.93</mn></mrow></mtd>
+   <mtd><mn>1.08</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.31</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>2.14</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>2.30</mn></mtd>
+   <mtd><mn>0.24</mn></mtd>
+   <mtd><mn>0.40</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.35</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>1.93</mn></mrow></mtd>
+   <mtd><mn>0.64</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.66</mn></mrow></mtd>
+   <mtd><mn>0.08</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.15</mn></mtd>
+   <mtd><mn>0.30</mn></mtd>
+   <mtd><mn>0.15</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>2.13</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.02</mn></mrow></mtd>
+   <mtd><mn>1.03</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.43</mn></mrow></mtd>
+   <mtd><mn>0.50</mn></mtd>
+</mtr>
+</mtable></mfenced>
+ <mtext>.</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+The routine first performs a <math><mi>Q</mi><mi>R</mi></math>&#xa0;factorization of <math><mi>A</mi></math>&#xa0;as <math><mi>A</mi><mo>=</mo><msub><mi>Q</mi><mi>a</mi></msub><mi>R</mi></math>&#xa0;and then reduces the factor <math><mi>R</mi></math>&#xa0;to bidiagonal form <math><mi>B</mi></math>: <math><mi>R</mi><mo>=</mo><msub><mi>Q</mi><mi>b</mi></msub><mi>B</mi><msup><mi>P</mi><mi mathvariant="normal">T</mi></msup></math>.  Finally it forms <math><msub><mi>Q</mi><mi>a</mi></msub></math>&#xa0;and calls <b>dormbr</b> to form <math><mi>Q</mi><mo>=</mo><msub><mi>Q</mi><mi>a</mi></msub><msub><mi>Q</mi><mi>b</mi></msub></math>.</div><div class="paramtext">In the second example, <math><mi>m</mi><mo>&lt;</mo><mi>n</mi></math>, and
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>A</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>5.42</mn></mrow></mtd>
+   <mtd><mn>3.28</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>3.68</mn></mrow></mtd>
+   <mtd><mn>0.27</mn></mtd>
+   <mtd><mn>2.06</mn></mtd>
+   <mtd><mn>0.46</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>1.65</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>3.40</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>3.20</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.03</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>4.06</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.01</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.37</mn></mrow></mtd>
+   <mtd><mn>2.35</mn></mtd>
+   <mtd><mn>1.90</mn></mtd>
+   <mtd><mn>4.31</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.76</mn></mrow></mtd>
+   <mtd><mn>1.13</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>3.15</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.11</mn></mrow></mtd>
+   <mtd><mn>1.99</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>2.70</mn></mrow></mtd>
+   <mtd><mn>0.26</mn></mtd>
+   <mtd><mn>4.50</mn></mtd>
+</mtr>
+</mtable></mfenced>
+ <mtext>.</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+The routine first performs an <math><mi>L</mi><mi>Q</mi></math>&#xa0;factorization of <math><mi>A</mi></math>&#xa0;as <math><mi>A</mi><mo>=</mo><mi>L</mi><msubsup><mi>P</mi><mi>a</mi><mi mathvariant="normal">T</mi></msubsup></math>&#xa0;and then reduces the factor <math><mi>L</mi></math>&#xa0;to bidiagonal form <math><mi>B</mi></math>: <math><mi>L</mi><mo>=</mo><mi>Q</mi><mi>B</mi><msubsup><mi>P</mi><mi>b</mi><mi mathvariant="normal">T</mi></msubsup></math>.  Finally it forms <math><msubsup><mi>P</mi><mi>b</mi><mi mathvariant="normal">T</mi></msubsup></math>&#xa0;and calls <b>dormbr</b> to form <math><msup><mi>P</mi><mi mathvariant="normal">T</mi></msup><mo>=</mo><msubsup><mi>P</mi><mi>b</mi><mi mathvariant="normal">T</mi></msubsup><msubsup><mi>P</mi><mi>a</mi><mi mathvariant="normal">T</mi></msubsup></math>.</div>
+
+</body>
+</html>

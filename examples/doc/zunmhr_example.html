@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>zunmhr example program</title>
+<link rel="stylesheet" href="styles/libdoc.css" type="text/css"/>
+<link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
+
+<h2 class="standard" id="example">
+ <div class="sec_name">Example program for zunmhr</div>
+</h2>
+<div class="paramtext">This example computes all the eigenvalues of the matrix <math><mi>A</mi></math>, where
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>A</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>3.97</mn></mrow><mo>-</mo><mn>5.04</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>4.11</mn></mrow><mo>+</mo><mn>3.70</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.34</mn></mrow><mo>+</mo><mn>1.01</mn><mi>i</mi></mtd>
+   <mtd><mn>1.29</mn><mo>-</mo><mn>0.86</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.34</mn><mo>-</mo><mn>1.50</mn><mi>i</mi></mtd>
+   <mtd><mn>1.52</mn><mo>-</mo><mn>0.43</mn><mi>i</mi></mtd>
+   <mtd><mn>1.88</mn><mo>-</mo><mn>5.38</mn><mi>i</mi></mtd>
+   <mtd><mn>3.36</mn><mo>+</mo><mn>0.65</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>3.31</mn><mo>-</mo><mn>3.85</mn><mi>i</mi></mtd>
+   <mtd><mn>2.50</mn><mo>+</mo><mn>3.45</mn><mi>i</mi></mtd>
+   <mtd><mn>0.88</mn><mo>-</mo><mn>1.08</mn><mi>i</mi></mtd>
+   <mtd><mn>0.64</mn><mo>-</mo><mn>1.48</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>1.10</mn></mrow><mo>+</mo><mn>0.82</mn><mi>i</mi></mtd>
+   <mtd><mn>1.81</mn><mo>-</mo><mn>1.59</mn><mi>i</mi></mtd>
+   <mtd><mn>3.25</mn><mo>+</mo><mn>1.33</mn><mi>i</mi></mtd>
+   <mtd><mn>1.57</mn><mo>-</mo><mn>3.44</mn><mi>i</mi></mtd>
+</mtr>
+</mtable></mfenced>
+<mtext>,</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+and those eigenvectors which correspond to eigenvalues <math><mi>&#x3bb;</mi></math>&#xa0;such that <math><mrow><mi>Re</mi><mfenced separators=""><mi>&#x3bb;</mi></mfenced></mrow><mo>&lt;</mo><mn>0</mn></math>.  Here <math><mi>A</mi></math>&#xa0;is general and must first be reduced to upper Hessenberg form <math><mi>H</mi></math>&#xa0;by <a class="rout" href="zgehrd_example.html">zgehrd</a>.  The program then calls <a class="rout" href="zhseqr_example.html">zhseqr</a> to compute the eigenvalues, and <a class="rout">zhsein</a> to compute the required eigenvectors of <math><mi>H</mi></math>&#xa0;by inverse iteration.  Finally <b>zunmhr</b> is called to transform the eigenvectors of <math><mi>H</mi></math>&#xa0;back to eigenvectors of the original matrix <math><mi>A</mi></math>.</div>
+
+</body>
+</html>

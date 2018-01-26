@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>dgeqpf example program</title>
+<link rel="stylesheet" href="styles/libdoc.css" type="text/css"/>
+<link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
+
+<h2 class="standard" id="example">
+ <div class="sec_name">Example program for dgeqpf</div>
+</h2>
+<div class="paramtext">This example finds the basic solutions for the linear least squares problems
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mrow><mi>minimize</mi><mo>&#x2061;</mo><msub><mfenced open="&#x2016;" close="&#x2016;" separators="">
+   <mi>A</mi><msub><mi>x</mi><mi>i</mi></msub>
+   <mo>-</mo>
+   <msub><mi>b</mi><mi>i</mi></msub>
+</mfenced><mn>2</mn></msub></mrow>
+ <mtext>, &#x2003;</mtext>
+ <mi>i</mi><mo>=</mo><mn>1</mn><mo>,</mo><mn>2</mn>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+where <math><msub><mi>b</mi><mn>1</mn></msub></math>&#xa0;and <math><msub><mi>b</mi><mn>2</mn></msub></math>&#xa0;are the columns of the matrix <math><mi>B</mi></math>,
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>A</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.09</mn></mrow></mtd>
+   <mtd><mn>0.14</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.46</mn></mrow></mtd>
+   <mtd><mn>0.68</mn></mtd>
+   <mtd><mn>1.29</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>1.56</mn></mrow></mtd>
+   <mtd><mn>0.20</mn></mtd>
+   <mtd><mn>0.29</mn></mtd>
+   <mtd><mn>1.09</mn></mtd>
+   <mtd><mn>0.51</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>1.48</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.43</mn></mrow></mtd>
+   <mtd><mn>0.89</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.71</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.96</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>1.09</mn></mrow></mtd>
+   <mtd><mn>0.84</mn></mtd>
+   <mtd><mn>0.77</mn></mtd>
+   <mtd><mn>2.11</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.27</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.08</mn></mtd>
+   <mtd><mn>0.55</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.13</mn></mrow></mtd>
+   <mtd><mn>0.14</mn></mtd>
+   <mtd><mn>1.74</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>1.59</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.72</mn></mrow></mtd>
+   <mtd><mn>1.06</mn></mtd>
+   <mtd><mn>1.24</mn></mtd>
+   <mtd><mn>0.34</mn></mtd>
+</mtr>
+</mtable></mfenced>
+ <mtext>&#x2003; and &#x2003;</mtext><mi>B</mi><mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.01</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.04</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.04</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.03</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.05</mn></mtd>
+   <mtd><mn>0.01</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.03</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.02</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.02</mn></mtd>
+   <mtd><mn>0.05</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.06</mn></mrow></mtd>
+   <mtd><mn>0.07</mn></mtd>
+</mtr>
+</mtable></mfenced>
+ <mtext>.</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+Here <math><mi>A</mi></math>&#xa0;is approximately rank-deficient, and hence it is preferable to use <b>dgeqpf</b> rather than <a class="rout" href="dgeqrf_example.html">dgeqrf</a>.</div>
+
+</body>
+</html>

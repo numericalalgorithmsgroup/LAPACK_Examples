@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>dsbtrd example program</title>
+<link rel="stylesheet" href="styles/libdoc.css" type="text/css"/>
+<link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
+
+<h2 class="standard" id="example">
+ <div class="sec_name">Example program for dsbtrd</div>
+</h2>
+<div class="paramtext">This example computes all the eigenvalues and eigenvectors of the matrix <math><mi>A</mi></math>, where
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>A</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mn>4.99</mn></mtd>
+   <mtd><mn>0.04</mn></mtd>
+   <mtd><mn>0.22</mn></mtd>
+   <mtd><mn>0.00</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.04</mn></mtd>
+   <mtd><mn>1.05</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.79</mn></mrow></mtd>
+   <mtd><mn>1.04</mn></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.22</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.79</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>2.31</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.30</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.00</mn></mtd>
+   <mtd><mn>1.04</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.30</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.43</mn></mrow></mtd>
+</mtr>
+</mtable></mfenced>
+<mtext>.</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+Here <math><mi>A</mi></math>&#xa0;is symmetric and is treated as a band matrix.  The program first calls <b>dsbtrd</b> to reduce <math><mi>A</mi></math>&#xa0;to tridiagonal form <math><mi>T</mi></math>, and to form the orthogonal matrix <math><mi>Q</mi></math>; the results are then passed to <a class="rout" href="dsteqr_example.html">dsteqr</a> which computes the eigenvalues and eigenvectors of <math><mi>A</mi></math>.</div>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>dggglm example program</title>
+<link rel="stylesheet" href="styles/libdoc.css" type="text/css"/>
+<link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
+
+<h2 class="standard" id="example">
+ <div class="sec_name">Example program for dggglm</div>
+</h2>
+<div class="paramtext">This example solves the weighted least squares problem
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <munder>
+  <mi mathvariant="normal">minimize</mi>
+  <mi>x</mi>
+</munder><mspace width="0.25em"/>
+ <msub><mfenced open="&#x2016;" close="&#x2016;" separators="">
+  <msup><mi>B</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup>
+  <mfenced separators=""><mi>d</mi><mo>-</mo><mi>A</mi><mi>x</mi></mfenced>
+</mfenced><mn>2</mn></msub>
+ <mtext>,</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+where
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>B</mi>
+ <mo>=</mo>
+ <mfenced><mtable>
+  <mtr>
+   <mtd><mn>0.5</mn></mtd>
+   <mtd><mn>0.0</mn></mtd>
+   <mtd><mn>0.0</mn></mtd>
+   <mtd><mn>0.0</mn></mtd>
+</mtr><mtr>
+   <mtd><mn>0.0</mn></mtd>
+   <mtd><mn>1.0</mn></mtd>
+   <mtd><mn>0.0</mn></mtd>
+   <mtd><mn>0.0</mn></mtd>
+</mtr><mtr>
+   <mtd><mn>0.0</mn></mtd>
+   <mtd><mn>0.0</mn></mtd>
+   <mtd><mn>2.0</mn></mtd>
+   <mtd><mn>0.0</mn></mtd>
+</mtr><mtr>
+   <mtd><mn>0.0</mn></mtd>
+   <mtd><mn>0.0</mn></mtd>
+   <mtd><mn>0.0</mn></mtd>
+   <mtd><mn>5.0</mn></mtd>
+</mtr>
+</mtable></mfenced>
+ <mtext>, &#x2003;</mtext>
+ <mi>d</mi><mo>=</mo>
+ <mfenced><mtable>
+  <mtr>
+   <mtd><mn>1.32</mn></mtd>
+</mtr><mtr>
+   <mtd><mrow><mo>-</mo><mn>4.00</mn></mrow></mtd>
+</mtr><mtr>
+   <mtd><mn>5.52</mn></mtd>
+</mtr><mtr>
+   <mtd><mn>3.24</mn></mtd>
+</mtr>
+</mtable></mfenced>
+ <mtext>&#x2003; and &#x2003;</mtext>
+ <mi>A</mi><mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.57</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.28</mn></mrow></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.39</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>1.93</mn></mrow></mtd>
+   <mtd><mn>1.08</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.31</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>2.30</mn></mtd>
+   <mtd><mn>0.24</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.40</mn></mrow></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.02</mn></mrow></mtd>
+   <mtd><mn>1.03</mn></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.43</mn></mrow></mtd>
+</mtr>
+</mtable></mfenced>
+ <mtext>.</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+</div>
+
+</body>
+</html>

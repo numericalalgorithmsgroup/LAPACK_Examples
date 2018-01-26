@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>zgbrfs example program</title>
+<link rel="stylesheet" href="styles/libdoc.css" type="text/css"/>
+<link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
+
+<h2 class="standard" id="example">
+ <div class="sec_name">Example program for zgbrfs</div>
+</h2>
+<div class="paramtext">This example solves the system of equations <math><mi>A</mi><mi>X</mi><mo>=</mo><mi>B</mi></math>&#xa0;using iterative refinement and to compute the forward and backward error bounds, where
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+<mi>A</mi><mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>1.65</mn></mrow><mo>+</mo><mn>2.26</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>2.05</mn></mrow><mo>-</mo><mn>0.85</mn><mi>i</mi></mtd>
+   <mtd><mn>0.97</mn><mo>-</mo><mn>2.84</mn><mi>i</mi></mtd>
+   <mtd><mn>0.00</mn><mo>+</mo><mn>0.00</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.00</mn><mo>+</mo><mn>6.30</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.48</mn></mrow><mo>-</mo><mn>1.75</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>3.99</mn></mrow><mo>+</mo><mn>4.01</mn><mi>i</mi></mtd>
+   <mtd><mn>0.59</mn><mo>-</mo><mn>0.48</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.00</mn><mo>+</mo><mn>0.00</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.77</mn></mrow><mo>+</mo><mn>2.83</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.06</mn></mrow><mo>+</mo><mn>1.94</mn><mi>i</mi></mtd>
+   <mtd><mn>3.33</mn><mo>-</mo><mn>1.04</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.00</mn><mo>+</mo><mn>0.00</mn><mi>i</mi></mtd>
+   <mtd><mn>0.00</mn><mo>+</mo><mn>0.00</mn><mi>i</mi></mtd>
+   <mtd><mn>4.48</mn><mo>-</mo><mn>1.09</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.46</mn></mrow><mo>-</mo><mn>1.72</mn><mi>i</mi></mtd>
+</mtr>
+</mtable></mfenced>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+and
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>B</mi><mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>1.06</mn></mrow><mo>+</mo><mn>21.50</mn><mi>i</mi></mtd>
+   <mtd><mn>12.85</mn><mo>+</mo><mphantom><mn>0</mn></mphantom><mn>2.84</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>22.72</mn></mrow><mo>-</mo><mn>53.90</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>70.22</mn></mrow><mo>+</mo><mn>21.57</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>28.24</mn><mo>-</mo><mn>38.60</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>20.73</mn></mrow><mo>-</mo><mphantom><mn>0</mn></mphantom><mn>1.23</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>34.56</mn></mrow><mo>+</mo><mn>16.73</mn><mi>i</mi></mtd>
+   <mtd><mn>26.01</mn><mo>+</mo><mn>31.97</mn><mi>i</mi></mtd>
+</mtr>
+</mtable></mfenced>
+<mtext>.</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+Here <math><mi>A</mi></math>&#xa0;is nonsymmetric and is treated as a band matrix, which must first be factorized by <a class="rout" href="zgbtrf_example.html">zgbtrf</a>.</div>
+
+</body>
+</html>

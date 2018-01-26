@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>zhbgst example program</title>
+<link rel="stylesheet" href="styles/libdoc.css" type="text/css"/>
+<link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
+
+<h2 class="standard" id="example">
+ <div class="sec_name">Example program for zhbgst</div>
+</h2>
+<div class="paramtext">This example computes all the eigenvalues of <math><mi>A</mi><mi>z</mi><mo>=</mo><mi>&#x3bb;</mi><mi>B</mi><mi>z</mi></math>, where
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>A</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>1.13</mn></mrow><mo>+</mo><mn>0.00</mn><mi>i</mi></mtd>
+   <mtd><mn>1.94</mn><mo>-</mo><mn>2.10</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.40</mn></mrow><mo>+</mo><mn>0.25</mn><mi>i</mi></mtd>
+   <mtd><mn>0.00</mn><mo>+</mo><mn>0.00</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>1.94</mn><mo>+</mo><mn>2.10</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.91</mn></mrow><mo>+</mo><mn>0.00</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.82</mn></mrow><mo>-</mo><mn>0.89</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.67</mn></mrow><mo>+</mo><mn>0.34</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>1.40</mn></mrow><mo>-</mo><mn>0.25</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.82</mn></mrow><mo>+</mo><mn>0.89</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.87</mn></mrow><mo>+</mo><mn>0.00</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.10</mn></mrow><mo>-</mo><mn>0.16</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.00</mn><mo>+</mo><mn>0.00</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.67</mn></mrow><mo>-</mo><mn>0.34</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.10</mn></mrow><mo>+</mo><mn>0.16</mn><mi>i</mi></mtd>
+   <mtd><mn>0.50</mn><mo>+</mo><mn>0.00</mn><mi>i</mi></mtd>
+</mtr>
+</mtable></mfenced>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+and
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>B</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mn>9.89</mn><mo>+</mo><mn>0.00</mn><mi>i</mi></mtd>
+   <mtd><mn>1.08</mn><mo>-</mo><mn>1.73</mn><mi>i</mi></mtd>
+   <mtd><mn>0.00</mn><mo>+</mo><mn>0.00</mn><mi>i</mi></mtd>
+   <mtd><mn>0.00</mn><mo>+</mo><mn>0.00</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>1.08</mn><mo>+</mo><mn>1.73</mn><mi>i</mi></mtd>
+   <mtd><mn>1.69</mn><mo>+</mo><mn>0.00</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.04</mn></mrow><mo>+</mo><mn>0.29</mn><mi>i</mi></mtd>
+   <mtd><mn>0.00</mn><mo>+</mo><mn>0.00</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.00</mn><mo>+</mo><mn>0.00</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.04</mn></mrow><mo>-</mo><mn>0.29</mn><mi>i</mi></mtd>
+   <mtd><mn>2.65</mn><mo>+</mo><mn>0.00</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.33</mn></mrow><mo>+</mo><mn>2.24</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.00</mn><mo>+</mo><mn>0.00</mn><mi>i</mi></mtd>
+   <mtd><mn>0.00</mn><mo>+</mo><mn>0.00</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.33</mn></mrow><mo>-</mo><mn>2.24</mn><mi>i</mi></mtd>
+   <mtd><mn>2.17</mn><mo>+</mo><mn>0.00</mn><mi>i</mi></mtd>
+</mtr>
+</mtable></mfenced>
+<mtext>.</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+Here <math><mi>A</mi></math>&#xa0;is Hermitian, <math><mi>B</mi></math>&#xa0;is Hermitian positive definite, and <math><mi>A</mi></math>&#xa0;and <math><mi>B</mi></math>&#xa0;are treated as band matrices.  <math><mi>B</mi></math>&#xa0;must first be factorized by <a class="rout">zpbstf</a>.  The program calls <b>zhbgst</b> to reduce the problem to the standard form <math><mi>C</mi><mi>y</mi><mo>=</mo><mi>&#x3bb;</mi><mi>y</mi></math>, then <a class="rout" href="zhbtrd_example.html">zhbtrd</a> to reduce <math><mi>C</mi></math>&#xa0;to tridiagonal form, and <a class="rout" href="dsterf_example.html">dsterf</a> to compute the eigenvalues.</div>
+
+</body>
+</html>

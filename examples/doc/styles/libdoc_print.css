@@ -1,0 +1,141 @@
+/******************************************************************
+ Start print styles 
+ *****************************************************************/
+@media print { 
+nav.libdoc {
+	display: none ;
+}
+
+.htmltoc {
+	display: none ;
+}
+
+.useful-links {
+	display: none ;
+}
+
+#reviewbar {
+	display: none ;
+}
+
+* {
+	color: black !important;
+	background-color: white !important;
+}
+
+
+/***************************
+****************************
+Base Styles Modelled on NAG
+****************************
+***************************/
+
+body {
+	font-family: "Times New Roman", "Times Roman", Serif;
+	font-size: 10.5pt;
+	line-height: 12pt;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
+	font-family: inherit;
+	font-weight: bold;
+	line-height: 12pt;
+	page-break-after: avoid;
+}
+
+.pageBreakAfterAvoid {
+	page-break-after: avoid;
+}
+
+h1,.h1,h2,.h2,h3,.h3 {
+	margin-top: 15pt;
+}
+
+h4,.h4,h5,.h5,h6,.h6 {
+	margin-top: 11px;
+}
+
+h1,.h1 {
+	font-size: 15pt;
+	line-height: 21pt;
+}
+
+h2,.h2 {
+	font-size: 13pt;
+	line-height: 18pt;
+}
+
+h2.libdoc {
+	margin-top: 6pt;
+	font-size: 15pt;
+}
+
+h3,.h3 {
+	font-size: 11.5pt;
+	line-height: 13pt;
+}
+
+h4,.h4 {
+	font-size: 10.5pt;
+	line-height: 12pt;
+}
+
+h5,.h5 {
+	font-size: 10.5pt;
+	line-height: 12pt;
+}
+
+h6,.h6 {
+	font-size: 10.5pt;
+	line-height: 12pt;
+}
+
+/***************************
+****************************
+End Base Styles
+****************************
+***************************/
+
+h2 div.sec_num, 
+h3 div.sec_num, 
+h4 div.sec_num {
+ float: left;
+ width: 10mm;
+ }
+h2 div.sec_name, 
+h3 div.sec_name, 
+h4 div.sec_name {
+ margin-left: 10mm;
+ }
+h5 div.sec_num {
+ float: left;
+ width: auto;
+ margin-right: 8px;
+}
+h5 div.sec_name {
+ margin-left: 0px;
+}
+
+[class^="cspec"],
+[class^="fspec"],
+[class^="flcspec"] {
+	font-size: 9pt;
+	line-height: 11pt;
+	border-width: 0;
+	border-spacing: 0;
+}
+
+.header {
+	margin-top: 24pt;
+	font-size: 8pt;
+	line-height: 9pt;
+}
+
+}
+
+/******************************************************************
+ Endprint styles 
+ *****************************************************************/

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>ztrsen example program</title>
+<link rel="stylesheet" href="styles/libdoc.css" type="text/css"/>
+<link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
+
+<h2 class="standard" id="example">
+ <div class="sec_name">Example program for ztrsen</div>
+</h2>
+<div class="paramtext">This example reorders the Schur factorization of the matrix <math><mi>A</mi><mo>=</mo><mi>Q</mi><mi>T</mi><msup><mi>Q</mi><mi mathvariant="normal">H</mi></msup></math>&#xa0;such that the eigenvalues stored in elements <math><msub><mi>t</mi><mn>11</mn></msub></math>&#xa0;and <math><msub><mi>t</mi><mn>44</mn></msub></math>&#xa0;appear as the leading elements on the diagonal of the reordered matrix <math><mover><mi>T</mi><mo>~</mo></mover></math>, where
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>T</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>6.0004</mn></mrow><mo>-</mo><mn>6.9999</mn><mi>i</mi></mtd>
+   <mtd><mn>0.3637</mn><mo>-</mo><mn>0.3656</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.1880</mn></mrow><mo>+</mo><mn>0.4787</mn><mi>i</mi></mtd>
+   <mtd><mn>0.8785</mn><mo>-</mo><mn>0.2539</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.0000</mn><mo>+</mo><mn>0.0000</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>5.0000</mn></mrow><mo>+</mo><mn>2.0060</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.0307</mn></mrow><mo>-</mo><mn>0.7217</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.2290</mn></mrow><mo>+</mo><mn>0.1313</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.0000</mn><mo>+</mo><mn>0.0000</mn><mi>i</mi></mtd>
+   <mtd><mn>0.0000</mn><mo>+</mo><mn>0.0000</mn><mi>i</mi></mtd>
+   <mtd><mn>7.9982</mn><mo>-</mo><mn>0.9964</mn><mi>i</mi></mtd>
+   <mtd><mn>0.9357</mn><mo>+</mo><mn>0.5359</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.0000</mn><mo>+</mo><mn>0.0000</mn><mi>i</mi></mtd>
+   <mtd><mn>0.0000</mn><mo>+</mo><mn>0.0000</mn><mi>i</mi></mtd>
+   <mtd><mn>0.0000</mn><mo>+</mo><mn>0.0000</mn><mi>i</mi></mtd>
+   <mtd><mn>3.0023</mn><mo>-</mo><mn>3.9998</mn><mi>i</mi></mtd>
+</mtr>
+</mtable></mfenced>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+and
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>Q</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.8347</mn></mrow><mo>-</mo><mn>0.1364</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.0628</mn></mrow><mo>+</mo><mn>0.3806</mn><mi>i</mi></mtd>
+   <mtd><mn>0.2765</mn><mo>-</mo><mn>0.0846</mn><mi>i</mi></mtd>
+   <mtd><mn>0.0633</mn><mo>-</mo><mn>0.2199</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.0664</mn><mo>-</mo><mn>0.2968</mn><mi>i</mi></mtd>
+   <mtd><mn>0.2365</mn><mo>+</mo><mn>0.5240</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.5877</mn></mrow><mo>-</mo><mn>0.4208</mn><mi>i</mi></mtd>
+   <mtd><mn>0.0835</mn><mo>+</mo><mn>0.2183</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.0362</mn></mrow><mo>-</mo><mn>0.3215</mn><mi>i</mi></mtd>
+   <mtd><mn>0.3143</mn><mo>-</mo><mn>0.5473</mn><mi>i</mi></mtd>
+   <mtd><mn>0.0576</mn><mo>-</mo><mn>0.5736</mn><mi>i</mi></mtd>
+   <mtd><mn>0.0057</mn><mo>-</mo><mn>0.4058</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.0086</mn><mo>+</mo><mn>0.2958</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.3416</mn></mrow><mo>-</mo><mn>0.0757</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.1900</mn></mrow><mo>-</mo><mn>0.1600</mn><mi>i</mi></mtd>
+   <mtd><mn>0.8327</mn><mo>-</mo><mn>0.1868</mn><mi>i</mi></mtd>
+</mtr>
+</mtable></mfenced>
+<mtext>.</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+The original matrix <math><mi>A</mi></math>&#xa0;is given in <a class="sec" href="zunghr_example.html"><b>zunghr</b></a>.</div>
+
+</body>
+</html>

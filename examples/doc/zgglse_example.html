@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>zgglse example program</title>
+<link rel="stylesheet" href="styles/libdoc.css" type="text/css"/>
+<link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
+
+<h2 class="standard" id="example">
+ <div class="sec_name">Example program for zgglse</div>
+</h2>
+<div class="paramtext">This example solves the least squares problem
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <munder>
+  <mi mathvariant="normal">minimize</mi>
+  <mi>x</mi>
+</munder><mspace width="0.25em"/>
+ <msub><mfenced open="&#x2016;" close="&#x2016;" separators=""><mi>c</mi><mo>-</mo><mi>A</mi><mi>x</mi></mfenced><mn>2</mn></msub>
+ <mtext>&#x2003; subject to &#x2003;</mtext>
+ <mi>B</mi><mi>x</mi><mo>=</mo><mi>d</mi>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+where
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>c</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>2.54</mn></mrow><mo>+</mo><mn>0.09</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>1.65</mn><mo>-</mo><mn>2.26</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>2.11</mn></mrow><mo>-</mo><mn>3.96</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>1.82</mn><mo>+</mo><mn>3.30</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>6.41</mn></mrow><mo>+</mo><mn>3.77</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>2.07</mn><mo>+</mo><mn>0.66</mn><mi>i</mi></mtd>
+</mtr>
+</mtable></mfenced>
+ <mtext>,</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+and
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>A</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mn>0.96</mn><mo>-</mo><mn>0.81</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.03</mn></mrow><mo>+</mo><mn>0.96</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.91</mn></mrow><mo>+</mo><mn>2.06</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.05</mn></mrow><mo>+</mo><mn>0.41</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.98</mn></mrow><mo>+</mo><mn>1.98</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.20</mn></mrow><mo>+</mo><mn>0.19</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.66</mn></mrow><mo>+</mo><mn>0.42</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.81</mn></mrow><mo>+</mo><mn>0.56</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.62</mn><mo>-</mo><mn>0.46</mn><mi>i</mi></mtd>
+   <mtd><mn>1.01</mn><mo>+</mo><mn>0.02</mn><mi>i</mi></mtd>
+   <mtd><mn>0.63</mn><mo>-</mo><mn>0.17</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.11</mn></mrow><mo>+</mo><mn>0.60</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.37</mn><mo>+</mo><mn>0.38</mn><mi>i</mi></mtd>
+   <mtd><mn>0.19</mn><mo>-</mo><mn>0.54</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.98</mn></mrow><mo>-</mo><mn>0.36</mn><mi>i</mi></mtd>
+   <mtd><mn>0.22</mn><mo>-</mo><mn>0.20</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.83</mn><mo>+</mo><mn>0.51</mn><mi>i</mi></mtd>
+   <mtd><mn>0.20</mn><mo>+</mo><mn>0.01</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.17</mn></mrow><mo>-</mo><mn>0.46</mn><mi>i</mi></mtd>
+   <mtd><mn>1.47</mn><mo>+</mo><mn>1.59</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>1.08</mn><mo>-</mo><mn>0.28</mn><mi>i</mi></mtd>
+   <mtd><mn>0.20</mn><mo>-</mo><mn>0.12</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.07</mn></mrow><mo>+</mo><mn>1.23</mn><mi>i</mi></mtd>
+   <mtd><mn>0.26</mn><mo>+</mo><mn>0.26</mn><mi>i</mi></mtd>
+</mtr>
+</mtable></mfenced>
+ <mtext>,</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>B</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mn>1.0</mn><mo>+</mo><mn>0.0</mn><mi>i</mi></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom><mphantom><mi>i</mi><mo>+</mo><mn>0.0</mn></mphantom></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.0</mn></mrow><mo>+</mo><mn>0.0</mn><mi>i</mi></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom><mphantom><mi>i</mi><mo>+</mo><mn>0.0</mn></mphantom></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom><mphantom><mi>i</mi><mo>+</mo><mn>0.0</mn></mphantom></mtd>
+   <mtd><mn>1.0</mn><mo>+</mo><mn>0.0</mn><mi>i</mi></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom><mphantom><mi>i</mi><mo>+</mo><mn>0.0</mn></mphantom></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.0</mn></mrow><mo>+</mo><mn>0.0</mn><mi>i</mi></mtd>
+</mtr>
+</mtable></mfenced>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+and
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>d</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+  <mtr>
+   <mtd><mn>0</mn></mtd>
+</mtr><mtr>
+   <mtd><mn>0</mn></mtd>
+</mtr>
+</mtable></mfenced>
+ <mtext>.</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+</div><div class="paramtext">The constraints <math>
+ <mi>B</mi><mi>x</mi><mo>=</mo><mi>d</mi>
+</math>&#xa0;correspond to <math>
+ <msub><mi>x</mi><mn>1</mn></msub>
+ <mo>=</mo>
+ <msub><mi>x</mi><mn>3</mn></msub>
+</math>&#xa0;and <math>
+ <msub><mi>x</mi><mn>2</mn></msub>
+ <mo>=</mo>
+ <msub><mi>x</mi><mn>4</mn></msub>
+</math>.</div><div class="paramtext">Note that the block size (NB) of <math><mn>64</mn></math>&#xa0;assumed in this example is not realistic for such a small problem, but should be suitable for large problems.</div>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>zgtrfs example program</title>
+<link rel="stylesheet" href="styles/libdoc.css" type="text/css"/>
+<link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
+
+<h2 class="standard" id="example">
+ <div class="sec_name">Example program for zgtrfs</div>
+</h2>
+<div class="paramtext">This example solves the equations
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>A</mi><mi>X</mi><mo>=</mo><mi>B</mi>
+ <mtext>,</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+where <math>
+ <mi>A</mi>
+</math>&#xa0;is the tridiagonal matrix
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>A</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>1.3</mn></mrow><mo>+</mo><mn>1.3</mn><mi>i</mi></mtd>
+   <mtd><mn>2.0</mn><mo>-</mo><mn>1.0</mn><mi>i</mi></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom><mphantom><mi>i</mi><mo>+</mo><mn>0.0</mn></mphantom></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom><mphantom><mi>i</mi><mo>+</mo><mn>0.0</mn></mphantom></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom><mphantom><mi>i</mi><mo>+</mo><mn>0.0</mn></mphantom></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>1.0</mn><mo>-</mo><mn>2.0</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.3</mn></mrow><mo>+</mo><mn>1.3</mn><mi>i</mi></mtd>
+   <mtd><mn>2.0</mn><mo>+</mo><mn>1.0</mn><mi>i</mi></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom><mphantom><mi>i</mi><mo>+</mo><mn>0.0</mn></mphantom></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom><mphantom><mi>i</mi><mo>+</mo><mn>0.0</mn></mphantom></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom><mphantom><mi>i</mi><mo>+</mo><mn>0.0</mn></mphantom></mtd>
+   <mtd><mn>1.0</mn><mo>+</mo><mn>1.0</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.3</mn></mrow><mo>+</mo><mn>3.3</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.0</mn></mrow><mo>+</mo><mn>1.0</mn><mi>i</mi></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom><mphantom><mi>i</mi><mo>+</mo><mn>0.0</mn></mphantom></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom><mphantom><mi>i</mi><mo>+</mo><mn>0.0</mn></mphantom></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom><mphantom><mi>i</mi><mo>+</mo><mn>0.0</mn></mphantom></mtd>
+   <mtd><mn>2.0</mn><mo>-</mo><mn>3.0</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>0.3</mn></mrow><mo>+</mo><mn>4.3</mn><mi>i</mi></mtd>
+   <mtd><mn>1.0</mn><mo>-</mo><mn>1.0</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom><mphantom><mi>i</mi><mo>+</mo><mn>0.0</mn></mphantom></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom><mphantom><mi>i</mi><mo>+</mo><mn>0.0</mn></mphantom></mtd>
+   <mtd><mn>0</mn><mphantom><mn>.0</mn></mphantom><mphantom><mi>i</mi><mo>+</mo><mn>0.0</mn></mphantom></mtd>
+   <mtd><mn>1.0</mn><mo>+</mo><mn>1.0</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>3.3</mn></mrow><mo>+</mo><mn>1.3</mn><mi>i</mi></mtd>
+</mtr>
+</mtable></mfenced>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+and
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>B</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mn>2.4</mn><mo>-</mo><mphantom><mn>0</mn></mphantom><mn>5.0</mn><mi>i</mi></mtd>
+   <mtd><mn>2.7</mn><mo>+</mo><mphantom><mn>0</mn></mphantom><mn>6.9</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>3.4</mn><mo>+</mo><mn>18.2</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>6.9</mn></mrow><mo>-</mo><mphantom><mn>0</mn></mphantom><mn>5.3</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>14.7</mn></mrow><mo>+</mo><mphantom><mn>0</mn></mphantom><mn>9.7</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>6.0</mn></mrow><mo>-</mo><mphantom><mn>0</mn></mphantom><mn>0.6</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>31.9</mn><mo>-</mo><mphantom><mn>0</mn></mphantom><mn>7.7</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>3.9</mn></mrow><mo>+</mo><mphantom><mn>0</mn></mphantom><mn>9.3</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>1.0</mn></mrow><mo>+</mo><mphantom><mn>0</mn></mphantom><mn>1.6</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>3.0</mn></mrow><mo>+</mo><mn>12.2</mn><mi>i</mi></mtd>
+</mtr>
+</mtable></mfenced>
+ <mtext>.</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+Estimates for the backward errors and forward errors are also output.</div>
+
+</body>
+</html>

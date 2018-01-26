@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>zhpsvx example program</title>
+<link rel="stylesheet" href="styles/libdoc.css" type="text/css"/>
+<link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
+
+<h2 class="standard" id="example">
+ <div class="sec_name">Example program for zhpsvx</div>
+</h2>
+<div class="paramtext">This example solves the equations
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>A</mi><mi>X</mi><mo>=</mo><mi>B</mi>
+ <mtext>,</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+where <math>
+ <mi>A</mi>
+</math>&#xa0;is the Hermitian matrix
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>A</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>1.84</mn></mrow><mphantom><mi>i</mi><mo>+</mo><mn>0.00</mn></mphantom></mtd>
+   <mtd><mn>0.11</mn><mo>-</mo><mn>0.11</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.78</mn></mrow><mo>-</mo><mn>1.18</mn><mi>i</mi></mtd>
+   <mtd><mn>3.91</mn><mo>-</mo><mn>1.50</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>0.11</mn><mo>+</mo><mn>0.11</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>4.63</mn></mrow><mphantom><mi>i</mi><mo>+</mo><mn>0.00</mn></mphantom></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.84</mn></mrow><mo>+</mo><mn>0.03</mn><mi>i</mi></mtd>
+   <mtd><mn>2.21</mn><mo>+</mo><mn>0.21</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>1.78</mn></mrow><mo>+</mo><mn>1.18</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.84</mn></mrow><mo>-</mo><mn>0.03</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>8.87</mn></mrow><mphantom><mi>i</mi><mo>+</mo><mn>0.00</mn></mphantom></mtd>
+   <mtd><mn>1.58</mn><mo>-</mo><mn>0.90</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>3.91</mn><mo>+</mo><mn>1.50</mn><mi>i</mi></mtd>
+   <mtd><mn>2.21</mn><mo>-</mo><mn>0.21</mn><mi>i</mi></mtd>
+   <mtd><mn>1.58</mn><mo>+</mo><mn>0.90</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>1.36</mn></mrow><mphantom><mi>i</mi><mo>+</mo><mn>0.00</mn></mphantom></mtd>
+</mtr>
+</mtable></mfenced>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+and
+
+<div class="formula"><table class="formula"><tr><td class="formula"><math display="block">
+ <mi>B</mi>
+ <mo>=</mo>
+ <mfenced><mtable columnalign="right">
+<mtr>
+   <mtd><mn>2.98</mn><mo>-</mo><mn>10.18</mn><mi>i</mi></mtd>
+   <mtd><mn>28.68</mn><mo>-</mo><mn>39.89</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>9.58</mn></mrow><mo>+</mo><mphantom><mn>0</mn></mphantom><mn>3.88</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>24.79</mn></mrow><mo>-</mo><mphantom><mn>0</mn></mphantom><mn>8.40</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mrow><mo>-</mo><mn>0.77</mn></mrow><mo>-</mo><mn>16.05</mn><mi>i</mi></mtd>
+   <mtd><mn>4.23</mn><mo>-</mo><mn>70.02</mn><mi>i</mi></mtd>
+</mtr>
+
+<mtr>
+   <mtd><mn>7.79</mn><mo>+</mo><mphantom><mn>0</mn></mphantom><mn>5.48</mn><mi>i</mi></mtd>
+   <mtd><mrow><mo>-</mo><mn>35.39</mn></mrow><mo>+</mo><mn>18.01</mn><mi>i</mi></mtd>
+</mtr>
+</mtable></mfenced>
+ <mtext>.</mtext>
+</math></td><td class="formula2">&#xa0;</td></tr></table></div>
+
+</div><div class="paramtext">Error estimates for the solutions, and an estimate of the reciprocal of the condition number of the matrix <math>
+ <mi>A</mi>
+</math>&#xa0;are also output.</div>
+
+</body>
+</html>
