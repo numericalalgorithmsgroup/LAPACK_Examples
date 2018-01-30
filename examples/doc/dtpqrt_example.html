@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
 <head>
 <meta charset="UTF-8"/>
@@ -111,8 +110,10 @@ where <math><msub><mi>b</mi><mn>1</mn></msub></math>&#xa0;and <math><msub><mi>b<
 A <math><mi>Q</mi><mi>R</mi></math>&#xa0;factorization is performed on the first <math><mn>4</mn></math>&#xa0;rows of <math><mi>A</mi></math>&#xa0;using <a class="rout" href="dgeqrt_example.html">dgeqrt</a> after which the first <math><mn>4</mn></math>&#xa0;rows of <math><mi>B</mi></math>&#xa0;are updated by applying <math><msup><mi>Q</mi><mi>T</mi></msup></math>&#xa0;using <a class="rout">dgemqrt</a>.  The remaining row is added by performing a <math><mi>Q</mi><mi>R</mi></math>&#xa0;update using <b>dtpqrt</b>; <math><mi>B</mi></math>&#xa0;is updated by applying the new <math><msup><mi>Q</mi><mi>T</mi></msup></math>&#xa0;using <a class="rout">dtpmqrt</a>; the solution is finally obtained by triangular solve using <math><mi>R</mi></math>&#xa0;from the updated <math><mi>Q</mi><mi>R</mi></math>.</div>
 
 <hr>
-<p><a href="https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/examples/source/dtpqrt_example.f90">f90 source code</a></p>
-<p><a href="https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/examples/data/dtpqrt_example.d">Input data file</a></p>
-<p><a href="https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/examples/baseresults/dtpqrt_example.r">Expected results</a></p>
+<ul>
+<li><a href="https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/examples/source/dtpqrt_example.f90">f90 source code</a></li>
+<li><a href="https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/examples/data/dtpqrt_example.d">Input data file</a></li>
+<li><a href="https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/examples/baseresults/dtpqrt_example.r">Expected results</a></li>
+</ul>
 </body>
 </html>

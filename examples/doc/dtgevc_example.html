@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
 <head>
 <meta charset="UTF-8"/>
@@ -107,8 +106,10 @@
 To compute generalized eigenvalues, it is required to call five routines: <a class="rout">dggbal</a> to balance the matrix, <a class="rout" href="dgeqrf_example.html">dgeqrf</a> to perform the <math><mi>Q</mi><mi>R</mi></math>&#xa0;factorization of <math><mi>B</mi></math>, <a class="rout">dormqr</a> to apply <math><mi>Q</mi></math>&#xa0;to <math><mi>A</mi></math>, <a class="rout">dgghrd</a> to reduce the matrix pair to the generalized Hessenberg form and <a class="rout" href="dhgeqz_example.html">dhgeqz</a> to compute the eigenvalues via the <math><mi>Q</mi><mi>Z</mi></math>&#xa0;algorithm.</div><div class="paramtext">The computation of generalized eigenvectors is done by calling <b>dtgevc</b> to compute the eigenvectors of the balanced matrix pair.  The routine <a class="rout">dggbak</a> is called to backward transform the eigenvectors to the user-supplied matrix pair.  If both left and right eigenvectors are required then <a class="rout">dggbak</a> must be called twice.</div>
 
 <hr>
-<p><a href="https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/examples/source/dtgevc_example.f90">f90 source code</a></p>
-<p><a href="https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/examples/data/dtgevc_example.d">Input data file</a></p>
-<p><a href="https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/examples/baseresults/dtgevc_example.r">Expected results</a></p>
+<ul>
+<li><a href="https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/examples/source/dtgevc_example.f90">f90 source code</a></li>
+<li><a href="https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/examples/data/dtgevc_example.d">Input data file</a></li>
+<li><a href="https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/examples/baseresults/dtgevc_example.r">Expected results</a></li>
+</ul>
 </body>
 </html>
