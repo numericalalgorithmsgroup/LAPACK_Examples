@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="styles/libdoc.css" type="text/css"/>
 <link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
 
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=MML_CHTML"></script> </head><body>
 <h2 class="standard" id="example">
  <div class="sec_name">Example program for ztgevc</div>
 </h2>
@@ -86,5 +87,6 @@ and
 
 To compute generalized eigenvalues, it is required to call five routines: <a class="rout">zggbal</a> to balance the matrix, <a class="rout" href="zgeqrf_example.html">zgeqrf</a> to perform the <math><mi>Q</mi><mi>R</mi></math>&#xa0;factorization of <math><mi>B</mi></math>, <a class="rout">zunmqr</a> to apply <math><mi>Q</mi></math>&#xa0;to <math><mi>A</mi></math>, <a class="rout">zgghrd</a> to reduce the matrix pair to the generalized Hessenberg form and <a class="rout" href="zhgeqz_example.html">zhgeqz</a> to compute the eigenvalues via the <math><mi>Q</mi><mi>Z</mi></math>&#xa0;algorithm.</div><div class="paramtext">The computation of generalized eigenvectors is done by calling <b>ztgevc</b> to compute the eigenvectors of the balanced matrix pair.  The routine <a class="rout">zggbak</a> is called to backward transform the eigenvectors to the user-supplied matrix pair.  If both left and right eigenvectors are required then <a class="rout">zggbak</a> must be called twice.</div>
 
+<hr><p><a href="https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/examples/source/ztgevc_example.f90">Source</a></p>
 </body>
 </html>

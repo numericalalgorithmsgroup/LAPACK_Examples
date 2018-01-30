@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="styles/libdoc.css" type="text/css"/>
 <link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
 
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=MML_CHTML"></script> </head><body>
 <h2 class="standard" id="example">
  <div class="sec_name">Example program for ztzrzf</div>
 </h2>
@@ -103,5 +104,6 @@ and
 
 </div><div class="paramtext">The solution is obtained by first obtaining a <math><mi>Q</mi><mi>R</mi></math>&#xa0;factorization with column pivoting of the matrix <math><mi>A</mi></math>, and then the <math><mi>R</mi><mi>Z</mi></math>&#xa0;factorization of the leading <math><mi>k</mi></math>&#xa0;by <math><mi>k</mi></math>&#xa0;part of <math><mi>R</mi></math>&#xa0;is computed, where <math><mi>k</mi></math>&#xa0;is the estimated rank of <math><mi>A</mi></math>. A tolerance of <math><mn>0.01</mn></math>&#xa0;is used to estimate the rank of <math><mi>A</mi></math>&#xa0;from the upper triangular factor, <math><mi>R</mi></math>.</div><div class="paramtext">Note that the block size (NB) of <math><mn>64</mn></math>&#xa0;assumed in this example is not realistic for such a small problem, but should be suitable for large problems.</div>
 
+<hr><p><a href="https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/examples/source/ztzrzf_example.f90">Source</a></p>
 </body>
 </html>

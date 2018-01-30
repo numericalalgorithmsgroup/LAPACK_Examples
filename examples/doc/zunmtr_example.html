@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="styles/libdoc.css" type="text/css"/>
 <link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
 
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=MML_CHTML"></script> </head><body>
 <h2 class="standard" id="example">
  <div class="sec_name">Example program for zunmtr</div>
 </h2>
@@ -50,5 +51,6 @@
 
 Here <math><mi>A</mi></math>&#xa0;is Hermitian and must first be reduced to tridiagonal form <math><mi>T</mi></math>&#xa0;by <a class="rout" href="zhetrd_example.html">zhetrd</a>.  The program then calls <a class="rout">dstebz</a> to compute the requested eigenvalues and <a class="rout">zstein</a> to compute the associated eigenvectors of <math><mi>T</mi></math>.  Finally <b>zunmtr</b> is called to transform the eigenvectors to those of <math><mi>A</mi></math>.</div>
 
+<hr><p><a href="https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/examples/source/zunmtr_example.f90">Source</a></p>
 </body>
 </html>

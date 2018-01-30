@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="styles/libdoc.css" type="text/css"/>
 <link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
 
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=MML_CHTML"></script> </head><body>
 <h2 class="standard" id="example">
  <div class="sec_name">Example program for zhpgst</div>
 </h2>
@@ -86,5 +87,6 @@ and
 
 using packed storage.  Here <math><mi>B</mi></math>&#xa0;is Hermitian positive definite and must first be factorized by <a class="rout" href="zpptrf_example.html">zpptrf</a>.  The program calls <b>zhpgst</b> to reduce the problem to the standard form <math><mi>C</mi><mi>y</mi><mo>=</mo><mi>&#x3bb;</mi><mi>y</mi></math>; then <a class="rout" href="zhptrd_example.html">zhptrd</a> to reduce <math><mi>C</mi></math>&#xa0;to tridiagonal form, and <a class="rout" href="dsterf_example.html">dsterf</a> to compute the eigenvalues.</div>
 
+<hr><p><a href="https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/examples/source/zhpgst_example.f90">Source</a></p>
 </body>
 </html>
