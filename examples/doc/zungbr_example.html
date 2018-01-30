@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
 
 <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=MML_CHTML"></script> </head><body>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=MML_CHTML"></script> </head><body>
 <h2 class="standard" id="example">
  <div class="sec_name">Example program for zungbr</div>
 </h2>
@@ -93,6 +94,9 @@ in the first example and
 
 in the second.  <math><mi>A</mi></math>&#xa0;must first be reduced to tridiagonal form by <a class="rout" href="zgebrd_example.html">zgebrd</a>.  The program then calls <b>zungbr</b> twice to form <math><mi>Q</mi></math>&#xa0;and <math><msup><mi>P</mi><mi mathvariant="normal">H</mi></msup></math>, and passes these matrices to <a class="rout">zbdsqr</a>, which computes the singular value decomposition of <math><mi>A</mi></math>.</div>
 
-<hr><p><a href="https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/examples/source/zungbr_example.f90">Source</a></p>
+<hr>
+<p><a href="https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/examples/source/zungbr_example.f90">f90 source code</a></p>
+<p><a href="https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/examples/data/zungbr_example.d">Input data file</a></p>
+<p><a href="https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/examples/baseresults/zungbr_example.r">Expected results</a></p>
 </body>
 </html>

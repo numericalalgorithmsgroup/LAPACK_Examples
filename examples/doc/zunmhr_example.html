@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="styles/libdoc_print.css" type="text/css"/>
 
 <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=MML_CHTML"></script> </head><body>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=MML_CHTML"></script> </head><body>
 <h2 class="standard" id="example">
  <div class="sec_name">Example program for zunmhr</div>
 </h2>
@@ -51,6 +52,9 @@
 
 and those eigenvectors which correspond to eigenvalues <math><mi>&#x3bb;</mi></math>&#xa0;such that <math><mrow><mi>Re</mi><mfenced separators=""><mi>&#x3bb;</mi></mfenced></mrow><mo>&lt;</mo><mn>0</mn></math>.  Here <math><mi>A</mi></math>&#xa0;is general and must first be reduced to upper Hessenberg form <math><mi>H</mi></math>&#xa0;by <a class="rout" href="zgehrd_example.html">zgehrd</a>.  The program then calls <a class="rout" href="zhseqr_example.html">zhseqr</a> to compute the eigenvalues, and <a class="rout">zhsein</a> to compute the required eigenvectors of <math><mi>H</mi></math>&#xa0;by inverse iteration.  Finally <b>zunmhr</b> is called to transform the eigenvectors of <math><mi>H</mi></math>&#xa0;back to eigenvectors of the original matrix <math><mi>A</mi></math>.</div>
 
-<hr><p><a href="https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/examples/source/zunmhr_example.f90">Source</a></p>
+<hr>
+<p><a href="https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/examples/source/zunmhr_example.f90">f90 source code</a></p>
+<p><a href="https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/examples/data/zunmhr_example.d">Input data file</a></p>
+<p><a href="https://github.com/numericalalgorithmsgroup/LAPACK_Examples/blob/master/examples/baseresults/zunmhr_example.r">Expected results</a></p>
 </body>
 </html>
