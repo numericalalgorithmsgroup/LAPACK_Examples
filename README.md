@@ -21,9 +21,8 @@ Once you've taken a copy of the repository, you'll find these items:
   * GNUmakefile          - a makefile that can be used (with minor modification)
                            to compile and run all the LAPACK examples
 # Available example programs
-A list of example programs, along with descriptions of the problems
-they solve, is
-[here](https://numericalalgorithmsgroup.github.io/LAPACK_Examples/examples/doc/index.html)
+Here is [a list of example programs](https://numericalalgorithmsgroup.github.io/LAPACK_Examples/examples/doc/index.html),
+along with descriptions of the problems they solve.
 
 # How to build manually
 We assume that you already have a library of LAPACK and BLAS routines that
